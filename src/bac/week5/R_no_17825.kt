@@ -1,8 +1,9 @@
-package week5
+package bac.week5
 
 
 /*
 
+    주사위 윷놀이
 
  */
 

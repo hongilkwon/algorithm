@@ -7,15 +7,20 @@ package bac.week1
 String
 
 toIntOrNull
-숫자로 변환가능한 string이면 변환해주고 안되면 null를 반환한다.
+숫자로 변환 가능한 string 이면 변환해주고 불가능하다면, null 반환한다.
 
+* counting에 유효한 자료구조의 탐색속도
 
-String 이 주어졌을떄 Int를 찾을때,
+String(key) 이 주어졌을떄, Int(value) 찾을때,
 map<String, Int> -> O(log)
-arr<String> -> O(bac.week5.concept.getN)
 
-Int가 주어졌을때 String을 찾을때,
+String(value) 이 주어졌을떄
+arr<String> -> O(N)
+
+Int(key) 주어졌을때 String(value) 찾을때,
 map<Int, String> -> O(log)
+
+Int(index) 주어졌을때
 arr<String> -> O(1)
 
  */
@@ -33,7 +38,7 @@ fun main() = with(System.`in`.bufferedReader()) {
 
     val pmMap = mutableMapOf<String, Int>()
     pmList.forEachIndexed { index, s ->
-        pmMap[s]=index+1
+        pmMap[s] = index + 1
     }
 
     val quizList = MutableList(quizNum) {
@@ -56,7 +61,7 @@ fun main() = with(System.`in`.bufferedReader()) {
             if (quizList[i].toIntOrNull() == null) {
                 pmMap[quizList[i]].toString()
             } else {
-                pmList[quizList[i].toInt()-1]
+                pmList[quizList[i].toInt() - 1]
             }
         println(answer)
     }
