@@ -1,6 +1,5 @@
 package bac.week4
 
-import math.list
 import kotlin.math.abs
 import kotlin.math.min
 
@@ -15,7 +14,7 @@ import kotlin.math.min
 
 */
 
-//var bac.week5.concept.getN = 0
+//var n = 0
 //
 //lateinit var numArr: IntArray
 //lateinit var adj: Array<IntArray>
