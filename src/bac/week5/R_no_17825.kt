@@ -1,6 +1,7 @@
 package bac.week5
 
-import bac.week1.list
+import java.util.LinkedList
+import java.util.Queue
 
 
 /*
@@ -20,7 +21,10 @@ import bac.week1.list
 
  */
 
-var dice = emptyArray<Int>()
+
+val mal = Array(4) { 0 }
+val n = 10
+var diceList = emptyArray<Int>()
 
 val adj = Array(33) { mutableListOf<Int>() }
 
@@ -56,9 +60,48 @@ fun createAdjArr() {
     adj[20].add(32)
 }
 
-fun main() = with(System.`in`.bufferedReader()) {
-    dice = readLine().split(" ").map { it.toInt() }.toTypedArray()
 
+fun solve(cnt: Int): Int {
+
+    if (cnt == n) return 0
+    val result = 0
+
+    for (i in 0 until 4) {
+        val tempIdx = mal[i]
+        val malIdx = move(tempIdx, diceList[cnt])
+    }
+}
+
+fun move(start: Int, dice: Int): Int {
+    var current = start
+    var cnt = dice
+    // 마지막 위치에 이미 도착함
+    if (start == 32) return 32
+    // 특수위치 시작이라면
+    if (adj[start].size >= 2) {
+        current = adj[start][1]
+        cnt -= 1
+    }
+
+    if (cnt > 0) {
+        val queue: Queue<Int> = LinkedList()
+        queue.add(current)
+
+        var end = 0
+        while (queue.isNotEmpty()){
+            val p = queue.poll()
+            end = adj[p][0]
+            queue.add(end)
+            if (end == 32) break
+            cnt -= 1
+            if (cnt)
+
+        }
+    }
+}
+
+fun main() = with(System.`in`.bufferedReader()) {
+    diceList = readLine().split(" ").map { it.toInt() }.toTypedArray()
 }
 
 
