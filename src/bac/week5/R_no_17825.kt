@@ -18,21 +18,21 @@ package bac.week5
 
  */
 
-import java.util.LinkedList
-import java.util.Queue
-import kotlin.math.max
-
-val mal = Array(4) { 0 }
-val n = 10
-var diceList = emptyArray<Int>()
-
-val adj = Array(33) { mutableListOf<Int>() }
-
+//import java.util.LinkedList
+//import java.util.Queue
+//import kotlin.math.max
+//
+//val mal = Array(4) { 0 }
+//val n = 10
+//var diceList = emptyArray<Int>()
+//
+//val adj = Array(33) { mutableListOf<Int>() }
+//
 //val score = arrayOf(
 //    0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20,
 //    22, 24, 26, 28, 30, 32, 34, 36, 38, 40,
-//    13, 16, 19, 25, 22, 24, 30, 35, 28, 27,
-//    26, 0
+//    13, 16, 19, 25, 22, 24, 28, 27, 26, 30,
+//    35, 0
 //)
 //
 //fun createAdjArr() {
@@ -45,128 +45,94 @@ val adj = Array(33) { mutableListOf<Int>() }
 //    adj[22].add(23)
 //    adj[23].add(24)
 //
-//    adj[10].add(27)
-//    adj[27].add(28)
-//    adj[28].add(24)
-//
-//    adj[15].add(29)
-//    adj[29].add(30)
-//    adj[30].add(31)
-//    adj[31].add(24)
-//
-//    adj[24].add(25)
+//    adj[10].add(25)
 //    adj[25].add(26)
-//    adj[26].add(20)
+//    adj[26].add(24)
+//
+//    adj[15].add(27)
+//    adj[27].add(28)
+//    adj[28].add(29)
+//    adj[29].add(24)
+//
+//    adj[24].add(30)
+//    adj[30].add(31)
+//    adj[31].add(20)
 //    adj[20].add(32)
 //
+////    adj.forEachIndexed { index, ints ->
+////        println("$index ${ints.joinToString(" ")}")
+////    }
 //}
-
-
-val score = arrayOf(
-    0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20,
-    22, 24, 26, 28, 30, 32, 34, 36, 38, 40,
-    13, 16, 19, 25, 22, 24, 28, 27, 26, 30,
-    35, 0
-)
-
-fun createAdjArr() {
-    // 시작점 0부터 도착전 노드 까지.
-    for (i in 0..19) {
-        adj[i].add(i + 1)
-    }
-    adj[5].add(21)
-    adj[21].add(22)
-    adj[22].add(23)
-    adj[23].add(24)
-
-    adj[10].add(25)
-    adj[25].add(26)
-    adj[26].add(24)
-
-    adj[15].add(27)
-    adj[27].add(28)
-    adj[28].add(29)
-    adj[29].add(24)
-
-    adj[24].add(30)
-    adj[30].add(31)
-    adj[31].add(20)
-    adj[20].add(32)
-
-//    adj.forEachIndexed { index, ints ->
-//        println("$index ${ints.joinToString(" ")}")
+//
+//
+//fun solve(cnt: Int): Int {
+//
+//    if (cnt == n) return 0
+//
+//    var result = 0
+//    for (i in 0 until 4) {
+//        val tempIdx = mal[i]
+//        val malIdx = move(tempIdx, diceList[cnt])
+//        if (check(malIdx, i)) continue
+//
+//        // BackTracking
+//        mal[i] = malIdx
+//        result = max(result, solve(cnt + 1) + score[malIdx])
+//        mal[i] = tempIdx
 //    }
-}
-
-
-fun solve(cnt: Int): Int {
-
-    if (cnt == n) return 0
-
-    var result = 0
-    for (i in 0 until 4) {
-        val tempIdx = mal[i]
-        val malIdx = move(tempIdx, diceList[cnt])
-        if (check(malIdx, i)) continue
-
-        // BackTracking
-        mal[i] = malIdx
-        result = max(result, solve(cnt + 1) + score[malIdx])
-        mal[i] = tempIdx
-    }
-
-    return result
-}
-
-fun move(start: Int, dice: Int): Int {
-
-    var current = start
-    var cnt = dice
-
-    // 마지막 위치에 이미 도착함
-    if (start == 32) return 32
-
-    // 특수위치 시작이라면
-    if (adj[start].size >= 2) {
-        current = adj[start][1]
-        cnt -= 1
-    }
-
-    //인접 리스트를 이용하여 이동
-    if (cnt > 0) {
-        val queue: Queue<Int> = LinkedList()
-        queue.add(current)
-
-        var end = 0
-        while (queue.isNotEmpty()) {
-            val p = queue.poll()
-            end = adj[p][0]
-            queue.add(end)
-
-            if (end == 32) break
-            cnt -= 1
-            if (cnt == 0) break
-        }
-        return end
-    } else {
-        return current
-    }
-}
-
-fun check(point: Int, currentMal: Int): Boolean {
-    if (point == 32) return false
-    for (i in 0 until 4) {
-        if (currentMal == i) continue
-        if (mal[i] == point) return true
-    }
-    return false
-}
-
-fun main() = with(System.`in`.bufferedReader()) {
-    diceList = readLine().split(" ").map { it.toInt() }.toTypedArray()
-    createAdjArr()
-    println(solve(0))
-    Unit
-}
+//
+//    return result
+//}
+//
+//fun move(start: Int, dice: Int): Int {
+//
+//    var current = start
+//    var cnt = dice
+//
+//    // 마지막 위치에 이미 도착함
+//    if (start == 32) return 32
+//
+//    // 특수위치 시작이라면
+//    if (adj[start].size >= 2) {
+//        current = adj[start][1]
+//        cnt -= 1
+//    }
+//
+//    //인접 리스트를 이용하여 이동
+//    if (cnt > 0) {
+//        val queue: Queue<Int> = LinkedList()
+//        queue.add(current)
+//
+//        var end = 0
+//        while (queue.isNotEmpty()) {
+//            val p = queue.poll()
+//            end = adj[p][0]
+//            queue.add(end)
+//
+//            if (end == 32) break
+//            cnt -= 1
+//            if (cnt == 0) break
+//        }
+//        return end
+//    } else {
+//        return current
+//    }
+//}
+//
+//fun check(point: Int, currentMal: Int): Boolean {
+//    if (point == 32) return false
+//    for (i in 0 until 4) {
+//        if (currentMal == i) continue
+//        if (mal[i] == point) return true
+//    }
+//    return false
+//}
+//
+//fun main() = with(System.`in`.bufferedReader()) {
+//    diceList = readLine().split(" ").map { it.toInt() }.toTypedArray()
+//    createAdjArr()
+//    println(solve(0))
+//    Unit
+//}
 
 
