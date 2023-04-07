@@ -3,7 +3,7 @@ package bac.week2.concept
 /**
  * graph
  * 정점(Vertex) 과 간선(Edge)으로 이루어진 자료구조.
- * degree - 1개의 Vertex 에 연결된 Edge 의 개수
+ * degree - 1 개의 Vertex 에 연결된 Edge 의 개수
  *
  *
  * tree

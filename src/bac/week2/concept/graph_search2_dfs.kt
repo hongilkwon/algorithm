@@ -7,9 +7,9 @@ package bac.week2.concept
  *  한 번 방문한 곳은 다시는 지나지 않는다.
  *
  *  정점 u의 visited 배열을 참으로 바꾸고 u로 부터 연결되어있는 v지점을 탐색합니다.
- *  이 때 방문되어있지 않은 노드에 대해 "재귀적"으로 DFS를 호출합니다.
+ *  이 때 방문되어있지 않은 노드에 대해 "재귀적"으로 DFS 호출합니다.
  *
- * 수도 코드
+ * sudo code
  *
  * DFS(G, u)
     u.visited = true
@@ -43,30 +43,35 @@ package bac.week2.concept
 //}
 
 
-// 단순 그래프 탐색 DFS
+// 그래프 탐색 DFS
+
 //private val vNum = 6
-//val adjList = MutableList(vNum) { mutableListOf<Int>() }
-//
+//val adj = Array(vNum) { mutableListOf<Int>() }
 //val visited = Array(vNum) { 0 }
-//
-//fun dfs(g:List<List<Int>>, v: Int){
+//fun dfs(g: Array<MutableList<Int>>, v: Int) {
 //    println("v: $v")
 //    visited[v] = 1
-//    for (newV in adjList[v]){
-//        if (visited[newV] == 1) continue
-//        dfs(g, newV)
+//    for (nv in adj[v]) {
+//        if (visited[nv] == 1) continue
+//        dfs(g, nv)
 //    }
 //}
+//fun draw(){
+//    adj[1].add(2)
+//    adj[1].add(4)
 //
-//fun bac.week5.concept.main() {
+//    adj[2].add(1)
+//    adj[2].add(3)
 //
-//    adjList[1] = mutableListOf(2, 4)
-//    adjList[2] = mutableListOf(1, 3)
-//    adjList[3] = mutableListOf(2, 5)
-//    adjList[4] = mutableListOf(1)
-//    adjList[5] = mutableListOf(3)
+//    adj[3].add(2)
+//    adj[3].add(5)
 //
-//    dfs(adjList, 1)
+//    adj[4].add(1)
+//    adj[5].add(3)
+//}
+//fun main() {
+//    draw()
+//    dfs(adj, 1)
 //    println(visited.joinToString())
 //}
 
@@ -105,7 +110,7 @@ package bac.week2.concept
 //    }
 //}
 //
-//fun bac.week5.concept.main() {
+//fun main() {
 //    var result = 0
 //    for (i in 0 until  rows){
 //        for (j in 0 until cols){

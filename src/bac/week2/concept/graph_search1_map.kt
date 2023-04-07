@@ -9,13 +9,13 @@ package bac.week2.concept
 
 //val rows = 10
 //val cols = 10
-//val arr = Array(rows) { IntArray(cols){0} }
+//val arr = Array(rows) { Array(cols){0} }
 //
 //// 방향 백터
 //val dy = listOf(-1, 0, 1, 0)
 //val dx = listOf(0, 1, 0, -1)
 //
-//fun bac.week5.concept.main() {
+//fun main() {
 //    val y = 5
 //    val x = 5
 //

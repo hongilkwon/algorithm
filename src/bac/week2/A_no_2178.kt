@@ -46,7 +46,7 @@ BFS 이용하여 최단거리를 계산가능하다.
 //    }
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
 //    rows = info[0]
@@ -63,6 +63,6 @@ BFS 이용하여 최단거리를 계산가능하다.
 //        }
 //    }
 //
-//    bfs(map,0 to 0)
+//    bfs(map, 0 to 0)
 //    println(arrSD[rows-1][cols-1])
 //}
