@@ -9,25 +9,26 @@ package bac.week5
   10만 * 10만 반복문 돌면안됨.
 
   연속된합이라 생각하여 누적합을 이용하려고 하였으나, 작은 음수 나온 후 큰 양수가 나온다면 문제에 맞지가 않는다.
+  즉, 양수면 증가한다. 라는 생각을 해야한다.
 
    */
 
-import kotlin.math.max
-
-fun main() = with(System.`in`.bufferedReader()) {
-
-    val n = readLine().toInt()
-    val arr = readLine().split(" ").map { it.toInt() }.toTypedArray()
-
-
-    var answer = Int.MIN_VALUE
-    var sum = 0
-    for (i in 0 until arr.size) {
-        sum += arr[i]
-        answer = max(answer, sum)
-        if (sum < 0) sum = 0
-    }
-    println(answer)
-    Unit
-}
+//import kotlin.math.max
+//
+//fun main() = with(System.`in`.bufferedReader()) {
+//
+//    val n = readLine().toInt()
+//    val arr = readLine().split(" ").map { it.toInt() }.toTypedArray()
+//
+//
+//    var answer = Int.MIN_VALUE
+//    var sum = 0
+//    for (i in 0 until arr.size) {
+//        sum += arr[i]
+//        answer = max(answer, sum)
+//        if (sum < 0) sum = 0
+//    }
+//    println(answer)
+//    Unit
+//}
 
