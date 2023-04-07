@@ -33,7 +33,7 @@ import java.util.Queue
 
  */
 
-// 단순 그래프 탐색 BFS
+//그래프 탐색 BFS
 //import java.util.*
 //
 //val arrSD = IntArray(6) { 0 }
@@ -60,7 +60,7 @@ import java.util.Queue
 //    }
 //}
 //
-//fun bac.week5.concept.main() {
+//fun main() {
 //
 //    val vNum = 6
 //    val adjList = MutableList(vNum) { mutableListOf<Int>() }

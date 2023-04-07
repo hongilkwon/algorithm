@@ -48,6 +48,7 @@ package bac.week2.concept
 //private val vNum = 6
 //val adj = Array(vNum) { mutableListOf<Int>() }
 //val visited = Array(vNum) { 0 }
+//
 //fun dfs(g: Array<MutableList<Int>>, v: Int) {
 //    println("v: $v")
 //    visited[v] = 1
@@ -56,6 +57,7 @@ package bac.week2.concept
 //        dfs(g, nv)
 //    }
 //}
+//
 //fun draw(){
 //    adj[1].add(2)
 //    adj[1].add(4)
