@@ -1,6 +1,5 @@
 package bac.week2
 
-import java.util.Stack
 
 /*
 오큰수
@@ -24,8 +23,9 @@ import java.util.Stack
 
  */
 
+import java.util.Stack
 
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val bac.week5.concept.getN = readLine().toInt()
 //    val arr = readLine().split(" ").map { it.toInt() }.toIntArray()
