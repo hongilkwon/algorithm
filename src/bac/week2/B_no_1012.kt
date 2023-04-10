@@ -34,7 +34,7 @@ package bac.week2
 //    }
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val testCase = readLine().toInt()
 //
