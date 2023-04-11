@@ -26,9 +26,9 @@ fun rClockWise(arr: Array<Int>) {
 fun rInverseClockWise(arr: Array<Int>) {
     val temp = arr.first()
     for (i in 0..arr.size - 2) {
-        arr[i] = arr[i+1]
+        arr[i] = arr[i + 1]
     }
-    arr[arr.size-1] = temp
+    arr[arr.size - 1] = temp
 }
 
 fun main() = with(System.`in`.bufferedReader()) {
@@ -50,8 +50,18 @@ fun main() = with(System.`in`.bufferedReader()) {
     }
 //   println(rotateList.joinToString( " "))
 
-    for (i in 0 until rotateList.size){
+    for (i in 0 until rotateList.size) {
+        val info = rotateList[i]
 
+        val diskList = mutableListOf<Int>()
+        var temp = info.first
+        var idx = 1
+        while (n >= temp) {
+            diskList.add(temp)
+            idx += 1
+            temp = (info.first) * idx
+        }
+//        println(diskList.joinToString( " "))
 
     }
 
