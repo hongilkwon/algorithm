@@ -62,10 +62,7 @@ fun main() = with(System.`in`.bufferedReader()) {
             temp = (info.first) * idx
         }
 //        println(diskList.joinToString( " "))
-
     }
-
-
     Unit
 }
 
