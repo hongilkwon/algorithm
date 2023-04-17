@@ -15,6 +15,9 @@ var t = 0
 lateinit var map: Array<Array<Int>>
 val rotateList = mutableListOf<Triple<Int, Int, Int>>()
 
+val dy = arrayOf(-1, 0, 1, 0)
+val dx = arrayOf(0, 1, 0, -1)
+
 fun rClockWise(arr: Array<Int>) {
     val temp = arr.last()
     for (i in arr.size - 1 downTo 1) {
@@ -29,6 +32,10 @@ fun rInverseClockWise(arr: Array<Int>) {
         arr[i] = arr[i + 1]
     }
     arr[arr.size - 1] = temp
+}
+
+fun check() {
+
 }
 
 fun main() = with(System.`in`.bufferedReader()) {
@@ -62,6 +69,19 @@ fun main() = with(System.`in`.bufferedReader()) {
             temp = (info.first) * idx
         }
 //        println(diskList.joinToString( " "))
+
+        for (idx in 0 until diskList.size) {
+            repeat(info.third) {
+                if (info.second == 0) {
+                    rClockWise(map[diskList[idx] - 1])
+                } else {
+                    rInverseClockWise(map[diskList[idx] - 1])
+                }
+            }
+        }
+//        map.forEach { println(it.joinToString(" ")) }
+
+        check()
     }
     Unit
 }
