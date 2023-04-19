@@ -30,6 +30,20 @@ fun Array<Array<Int>>.deepCopy(): Array<Array<Int>> {
     return temp
 }
 
+fun rotate(info: Triple<Int, Int, Int>) {
+    val num = info.first
+    val dir = info.second
+    val cnt = info.third
+    for (idx in 0 until n) {
+        if ((idx + 1) % num == 0) {
+            if (dir == 0)
+                repeat(cnt) { rClockWise(map[idx]) }
+            else
+                repeat(cnt) { rInverseClockWise(map[idx]) }
+        }
+    }
+}
+
 fun rClockWise(arr: Array<Int>) {
     val temp = arr.last()
     for (i in arr.size - 1 downTo 1) {
@@ -53,8 +67,9 @@ fun makeExtended(): Array<Array<Int>> {
     for (i in 0 until map.size) {
         extended[i + 1][0] = map[i][map.first().size - 1]
     }
+
     for (i in 0 until map.size) {
-        extended[i + 1][extended.size - 1] = map[i][0]
+        extended[i + 1][extended.first().size - 1] = map[i][0]
     }
 
     for (i in 0 until map.size) {
@@ -147,27 +162,7 @@ fun main() = with(System.`in`.bufferedReader()) {
 
     for (i in 0 until rotateList.size) {
         val info = rotateList[i]
-
-        val diskList = mutableListOf<Int>()
-        var temp = info.first
-        var idx = 1
-        while (n >= temp) {
-            diskList.add(temp)
-            idx += 1
-            temp = (info.first) * idx
-        }
-//        println(diskList.joinToString( " "))
-        for (idx in 0 until diskList.size) {
-            repeat(info.third) {
-                if (info.second == 0) {
-                    rClockWise(map[diskList[idx] - 1])
-                } else {
-                    rInverseClockWise(map[diskList[idx] - 1])
-                }
-            }
-        }
-//        map.forEach { println(it.joinToString(" ")) }
-//        println()
+        rotate(info)
         upDate()
     }
 
