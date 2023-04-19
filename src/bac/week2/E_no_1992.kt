@@ -84,12 +84,12 @@ idx 계산을 잘못하면 힘들어진다.
 //    return true
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
-//    val bac.week5.concept.getN = readLine().toInt()
-//    map = Array(bac.week5.concept.getN) { IntArray(bac.week5.concept.getN) { 0 } }
+//    val n = readLine().toInt()
+//    map = Array(n) { IntArray(n) { 0 } }
 //
-//    for (i in 0 until bac.week5.concept.getN) {
+//    for (i in 0 until n) {
 //        val line = readLine().toCharArray().map { it.toString().toInt() }.toIntArray()
 //        map[i] = line
 //    }
