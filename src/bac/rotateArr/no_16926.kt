@@ -54,7 +54,6 @@ fun main() = with(System.`in`.bufferedReader()) {
 
     repeat(1) {
         rotate()
-
     }
 
     arr.forEach {

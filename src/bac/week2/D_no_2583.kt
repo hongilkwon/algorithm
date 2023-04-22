@@ -46,7 +46,7 @@ package bac.week2
 //    return cnt
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
 //    rows = info[0]
@@ -56,7 +56,7 @@ package bac.week2
 //    map = Array(rows) { IntArray(cols) { 1 } }
 //    visited = Array(rows) { IntArray(cols) { 0 } }
 //
-//    for (bac.week5.concept.getN in 0 until boxNum) {
+//    for (n in 0 until boxNum) {
 //        val boxP = readLine().split(" ").map { it.toInt() }
 //        val p1 = rows - boxP[1] - 1 to boxP[0]
 //        val p2 = rows - boxP[3] to boxP[2] - 1

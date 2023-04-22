@@ -3,11 +3,8 @@ package bac.week2
 /*
 쿼드트리
 2-E
-x
-
 
 재귀문제
-
 idx 계산을 잘못하면 힘들어진다.
 종료조건과 무엇을 재귀의 기준으로 잡는가를 잘해야 된다.
 
@@ -40,21 +37,21 @@ idx 계산을 잘못하면 힘들어진다.
 //        }
 //    }
 //
-//    val nm2 = Array(map.size / 2) {i ->
-//        IntArray(map.size / 2) {j ->
-//            map[i][map.size/2+j]
+//    val nm2 = Array(map.size / 2) { i ->
+//        IntArray(map.size / 2) { j ->
+//            map[i][map.size / 2 + j]
 //        }
 //    }
 //
-//    val nm3 = Array(map.size / 2) {i->
-//        IntArray(map.size / 2) { j->
-//            map[map.size/2+i][j]
+//    val nm3 = Array(map.size / 2) { i ->
+//        IntArray(map.size / 2) { j ->
+//            map[map.size / 2 + i][j]
 //        }
 //    }
 //
-//    val nm4 = Array(map.size / 2) {i->
-//        IntArray(map.size / 2) { j->
-//            map[map.size/2+i][map.size/2+j]
+//    val nm4 = Array(map.size / 2) { i ->
+//        IntArray(map.size / 2) { j ->
+//            map[map.size / 2 + i][map.size / 2 + j]
 //        }
 //    }
 //
