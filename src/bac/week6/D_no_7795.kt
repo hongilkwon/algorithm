@@ -9,8 +9,8 @@ package bac.week6
    400,000,000
    4억
 
-
-
+   kotlin
+   2분탐색을 이용한 lower_bound , upper_bound 구현
 
    */
 
@@ -19,6 +19,25 @@ var m = 0
 
 lateinit var arrA: Array<Int>
 lateinit var arrB: Array<Int>
+
+fun lowerBound(arr: Array<Int>, k: Int): Int {
+    var start = 0
+    var end = arr.lastIndex
+
+    if (arr.last() < k) return arr.size
+    if (arr.first() > k) return -1
+
+    while (start < end) {
+        val mid = (start + end) / 2
+        if (arr[mid] < k) {
+            start = mid + 1
+        } else {
+            end = mid
+        }
+    }
+    return start
+}
+
 fun main() = with(System.`in`.bufferedReader()) {
 
     val tc = readLine().toInt()
@@ -32,20 +51,14 @@ fun main() = with(System.`in`.bufferedReader()) {
 
         arrB = readLine().split(" ").map { it.toInt() }.toTypedArray()
         arrB.sort()
-//        println(arrB.joinToString(" "))
 
         var cnt = 0
         for (i in 0 until arrA.size) {
-            for (j in 0 until arrB.size){
-                if (arrA[i] > arrB[j]) {
-                    cnt += 1
-                } else {
-                    break
-                }
-            }
+            val idx = lowerBound(arrB, arrA[i])
+            if (idx > 0)
+                cnt += idx
         }
         println(cnt)
     }
     Unit
 }
-
