@@ -8,6 +8,8 @@ package bac.week2
 idx 계산을 잘못하면 힘들어진다.
 종료조건과 무엇을 재귀의 기준으로 잡는가를 잘해야 된다.
 
+큰 맵에서 작은 맵으로 부분 딥카피할때, 기준은 작은 맵의 i, j 기준으로 한다
+
  */
 
 //lateinit var map: Array<IntArray>
@@ -48,6 +50,8 @@ idx 계산을 잘못하면 힘들어진다.
 //            map[map.size / 2 + i][j]
 //        }
 //    }
+
+
 //
 //    val nm4 = Array(map.size / 2) { i ->
 //        IntArray(map.size / 2) { j ->

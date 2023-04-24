@@ -2,7 +2,7 @@ package bac.week6.concept
 
 
 /*
-   전깃줄
+   입국심사
    */
 
 fun main() = with(System.`in`.bufferedReader()) {
