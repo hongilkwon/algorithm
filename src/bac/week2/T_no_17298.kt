@@ -27,7 +27,7 @@ import java.util.Stack
 
 //fun main() = with(System.`in`.bufferedReader()) {
 //
-//    val bac.week5.concept.getN = readLine().toInt()
+//    val n = readLine().toInt()
 //    val arr = readLine().split(" ").map { it.toInt() }.toIntArray()
 //
 //    val result = IntArray(bac.week5.concept.getN) { -1 }

@@ -44,7 +44,7 @@ package bac.week3
 //    }
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //
 //    val info1 = readLine().split(" ").map { it.toInt() }

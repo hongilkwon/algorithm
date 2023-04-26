@@ -51,7 +51,7 @@ kotlin 언어로 깊이 넓이 우선 탐색 둘다 어떻게 푸는지 알수 �
 //    }
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
 //
@@ -68,7 +68,7 @@ kotlin 언어로 깊이 넓이 우선 탐색 둘다 어떻게 푸는지 알수 �
 //    val cntArr = Array(bac.week5.concept.getN + 1) { 0 }
 //
 //    var max = 0
-//    for (i in 1..bac.week5.concept.getN) {
+//    for (i in 1..n) {
 //        visited = Array(bac.week5.concept.getN + 1) { 0 }
 //        cnt = 0
 //        treeBfs(i)

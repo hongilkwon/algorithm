@@ -30,7 +30,7 @@ package bac.week2
 //        var thirdCondition = true
 //
 //        //first
-//        for (i in 0 until  password.length){
+//        for (i in 0 until password.length){
 //           if (mo.contains(password[i])){
 //               firstCondition = true
 //               break

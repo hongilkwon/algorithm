@@ -36,7 +36,7 @@ package bac.week2
 //    }
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //    val info = readLine().split(" ").map { it.toInt() }
 //
 //    val size = info[0]
@@ -58,7 +58,7 @@ package bac.week2
 //    val sortedList = list.sortedWith(comparator)
 //    sortedList.forEach { num ->
 //        repeat(num.count){
-//            print("${num.value} ")
+//            print("${num.value}")
 //        }
 //    }
 //}
