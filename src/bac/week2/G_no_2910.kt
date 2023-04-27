@@ -1,14 +1,14 @@
-package bac.week2
-
-/*
-2-G
-빈도정렬
-
-비교자(comparator)를 사용문제
-없으면 생성하여 할당하고 있으면 가져와서 작업한다.
-
- */
-
+//package bac.week2
+//
+///*
+//2-G
+//빈도정렬
+//
+//비교자(comparator)를 사용문제
+//없으면 생성하여 할당하고 있으면 가져와서 작업한다.
+//
+// */
+//
 //val comparator = compareBy<Num>({-it.count}, {it.order})
 //
 //class Num(
@@ -22,9 +22,7 @@ package bac.week2
 //
 //        other as Num
 //
-//        if (value != other.value) return false
-//
-//        return true
+//        return value == other.value
 //    }
 //
 //    override fun hashCode(): Int {
