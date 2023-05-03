@@ -1,20 +1,18 @@
 package bac.week2
 
 /*
-2-I
-수학숙제
+    2-I 수학숙제
 
-Int 21억5천  10자리
-long 922경  19자리
-Int -> String 변환하여 해결한다.
+    Int 21억5천  10자리
+    long 922경  19자리
+    Int -> String 변환하여 해결한다.
 
-Char type 유용한함수.
+    Char type 유용한함수.
 
-Char.isDigit()
-Char.isLetter()
+    Char.isDigit()
+    Char.isLetter()
 
-구현문제
-
+    구현문제
  */
 
 //val comparator = compareBy<String>({ it.length }, { it })
@@ -53,7 +51,6 @@ Char.isLetter()
 //            str.substring(idx)
 //        }
 //    }.sortedWith(comparator)
-//
 //
 //    sortedList.forEach {
 //        println(it)
