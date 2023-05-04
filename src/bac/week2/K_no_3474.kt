@@ -12,19 +12,21 @@ package bac.week2
 
  주어진 정수 n이 10억까지 이기 때문에
 
-         for (i in 1..bac.week5.concept.getN) {
-            var temp = i
-            while ((temp % 2) == 0) {
+         for (i in 1..n) {
+            var temp2 = i
+            while ((temp2 % 2) == 0) {
                 cnt2 += 1
-                temp /= 2
+                temp2 /= 2
             }
-            while ((temp % 5) == 0) {
+
+            var temp5 = i
+            while ((temp5 % 5) == 0) {
                 cnt5 += 1
-                temp /= 5
+                temp5 /= 5
             }
         }
 
-  이런 형태로 자리수를 판별하다보면 시간초과된다.
+  이런 형태로 0의개수를 세다보면 시간초과된다.
   2 4 8 16.. 제곱수
   5 25 125.. 제곱수
   가
@@ -38,26 +40,26 @@ package bac.week2
  */
 
 
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val testCase = readLine().toInt()
 //
 //    repeat(testCase) {
-//        val bac.week5.concept.getN = readLine().toInt()
+//        val n = readLine().toInt()
 //
 //        var cnt2 = 0
 //        var cnt5 = 0
 //
 //        var j = 1
-//        while(j <= bac.week5.concept.getN) {
+//        while(j <= n) {
 //            j *= 2
-//            cnt2 += bac.week5.concept.getN / j
+//            cnt2 += n / j
 //        }
 //
-//        var bac.week5.concept.getK = 1
-//        while(bac.week5.concept.getK <= bac.week5.concept.getN) {
-//            bac.week5.concept.getK *= 5
-//            cnt5 += bac.week5.concept.getN / bac.week5.concept.getK
+//        var k = 1
+//        while(k <= n) {
+//            k *= 5
+//            cnt5 += n / k
 //        }
 //
 //        if (cnt2 >= cnt5)

@@ -20,49 +20,49 @@ package bac.week6
 
    */
 
-import kotlin.math.min
-
-var total: Long = 0
-var win: Long = 0
-var winRate: Long = 0
-fun check(mid: Long): Boolean {
-
-    val nTotal = total + mid
-    val nWin = win + mid
-
-    val nWinRate = (nWin*100 / nTotal)
-
-    return nWinRate != winRate
-}
-
-fun main() = with(System.`in`.bufferedReader()) {
-
-    val info = readLine().split(" ").map { it.toLong() }
-    total = info[0]
-    win = info[1]
-
-    winRate = (win * 100 / total)
-
-    if (winRate in arrayOf(99L, 100L)) {
-        println(-1)
-        return@with
-    }
-
-    var left: Long = 1
-    var right: Long = 1_000_000_000
-
-    var answer = Long.MAX_VALUE
-
-    while (left <= right) {
-        val mid: Long = (left + right) / 2
-
-        if (check(mid)) {
-            answer = min(mid, answer)
-            right = mid - 1
-        } else {
-            left = mid + 1
-        }
-    }
-    println(answer)
-    Unit
-}
+//import kotlin.math.min
+//
+//var total: Long = 0
+//var win: Long = 0
+//var winRate: Long = 0
+//fun check(mid: Long): Boolean {
+//
+//    val nTotal = total + mid
+//    val nWin = win + mid
+//
+//    val nWinRate = (nWin*100 / nTotal)
+//
+//    return nWinRate != winRate
+//}
+//
+//fun main() = with(System.`in`.bufferedReader()) {
+//
+//    val info = readLine().split(" ").map { it.toLong() }
+//    total = info[0]
+//    win = info[1]
+//
+//    winRate = (win * 100 / total)
+//
+//    if (winRate in arrayOf(99L, 100L)) {
+//        println(-1)
+//        return@with
+//    }
+//
+//    var left: Long = 1
+//    var right: Long = 1_000_000_000
+//
+//    var answer = Long.MAX_VALUE
+//
+//    while (left <= right) {
+//        val mid: Long = (left + right) / 2
+//
+//        if (check(mid)) {
+//            answer = min(mid, answer)
+//            right = mid - 1
+//        } else {
+//            left = mid + 1
+//        }
+//    }
+//    println(answer)
+//    Unit
+//}
