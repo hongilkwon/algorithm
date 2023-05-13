@@ -3,7 +3,7 @@ package programmers.lv1
 /*
     카드뭉치
     단순구현 문제.
-    단, idx를 수동조절 및 Stack/Queue 비어있는지 확인하는것.
+    단, idx 수동조절 및 Stack/Queue 비어있는지 확인하는것.
 
  */
 

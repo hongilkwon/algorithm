@@ -3,7 +3,7 @@ package math
 /*
     순열 nPr
     n개 중에 r개를 순서를 고려하여 뽑는 경우의 수
-    bac.week5.concept.getN!/(bac.week5.concept.getN-r)!
+    n!/(n-r)!
     순열을 할때는 반드시! 오름차순 정렬이 선행된다.
  */
 
