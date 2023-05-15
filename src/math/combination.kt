@@ -20,7 +20,7 @@ fun combination(n: Int, r: Int, resultList: MutableList<Int> = mutableListOf(), 
         return
     }
 
-    for (i in start+1 until n){
+    for (i in start + 1 until n) {
         resultList.add(i)
         combination(n, r, resultList, start = i)
         resultList.remove(i)
@@ -30,8 +30,6 @@ fun combination(n: Int, r: Int, resultList: MutableList<Int> = mutableListOf(), 
 fun main() {
     combination(combiList.size, 2)
 }
-
-
 
 
 //val n = mutableListOf(1, 2, 3, 4)

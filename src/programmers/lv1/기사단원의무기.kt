@@ -19,26 +19,25 @@ package programmers.lv1
 
  */
 
-import kotlin.math.floor
-import kotlin.math.sqrt
-
-fun solution(number: Int, limit: Int, power: Int): Int {
-    var answer: Int = 0
-
-    val divisors = mutableSetOf<Int>()
-    for (i in 1..number) {
-        for (j in 1..sqrt(i.toDouble()).toInt()) {
-            if (i % j == 0) {
-                divisors.add(j)
-                divisors.add(i / j)
-            }
-        }
-        answer += if (divisors.size > limit) {
-            power
-        } else {
-            divisors.size
-        }
-        divisors.clear()
-    }
-    return answer
-}
+//import kotlin.math.floor
+//import kotlin.math.sqrt
+//fun solution(number: Int, limit: Int, power: Int): Int {
+//    var answer: Int = 0
+//
+//    val divisors = mutableSetOf<Int>()
+//    for (i in 1..number) {
+//        for (j in 1..sqrt(i.toDouble()).toInt()) {
+//            if (i % j == 0) {
+//                divisors.add(j)
+//                divisors.add(i / j)
+//            }
+//        }
+//        answer += if (divisors.size > limit) {
+//            power
+//        } else {
+//            divisors.size
+//        }
+//        divisors.clear()
+//    }
+//    return answer
+//}
