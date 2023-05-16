@@ -38,9 +38,9 @@ fun strToTime(str: String): Int {
 }
 
 fun timeToStr(time: Int): String {
-    val m = "00"+(time/60).toString()
-    val n = "00"+(time%60).toString()
-    return m.substring(m.length-2)+":"+n.substring(n.length-2)
+    val m = "00" + (time / 60).toString()
+    val n = "00" + (time % 60).toString()
+    return m.substring(m.length - 2) + ":" + n.substring(n.length - 2)
 }
 
 fun plusTime(prevGoalTime: Int, goalTime: Int) = goalTime - prevGoalTime
@@ -82,7 +82,7 @@ fun main() = with(System.`in`.bufferedReader()) {
 }
 
 // 첫번째 풀이로 로직이 틀리지는 않았으나 사고가 복잡하다.
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val goalNum = readLine().toInt()
 //
