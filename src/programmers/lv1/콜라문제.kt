@@ -12,15 +12,14 @@ package programmers.lv1
 
  */
 
-
-fun solution(a: Int, b: Int, n: Int): Int {
-    var answer: Int = 0
-
-    var num = n
-    while (num / a != 0) {
-        answer += (num / a) * b
-        num = (num / a) * b + (num % a)
-    }
-
-    return answer
-}
+//fun solution(a: Int, b: Int, n: Int): Int {
+//    var answer: Int = 0
+//
+//    var num = n
+//    while (num / a != 0) {
+//        answer += (num / a) * b
+//        num = (num / a) * b + (num % a)
+//    }
+//
+//    return answer
+//}
