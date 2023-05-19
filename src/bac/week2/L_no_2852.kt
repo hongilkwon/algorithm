@@ -58,18 +58,20 @@ package bac.week2
 //    var goal2 = 0
 //
 //    var prevGoalTime = 0
-//
-//    for (i in 1..goalNum) {
+//    for (i in 1..goalNum+1) {
 //
 //        val info = readLine().split(" ")
-//        // 새로운 골을 점수에 반영하기 전까지 누적된 시간을 누적한다.
+//
+//        // 새로운 골을 점수에 반영하기 전까지 누적된 시간을 할당해준다.
 //        if (goal1 > goal2) {
 //            winTime1 += plusTime(prevGoalTime, strToTime(info[1]))
 //        } else if (goal1 < goal2) {
 //            winTime2 += plusTime(prevGoalTime, strToTime(info[1]))
 //        }
+//
 //        // 점수 계산.
 //        if (info[0] == "1") goal1 += 1 else goal2 += 1
+//
 //        // 골을 넣시간 기록.
 //        prevGoalTime = strToTime(info[1])
 //
