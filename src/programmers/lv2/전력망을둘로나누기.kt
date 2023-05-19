@@ -1,5 +1,11 @@
 package programmers.lv2
 
+/*
+    전략망을 둘로 나누기
+
+    완전탐색 문제.
+
+ */
 //import kotlin.math.min
 //import kotlin.math.abs
 //

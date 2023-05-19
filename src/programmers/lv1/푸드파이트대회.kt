@@ -2,7 +2,6 @@ package programmers.lv1
 
 /*
     푸드파이트 대회
-
     단순구현 문제.
  */
 

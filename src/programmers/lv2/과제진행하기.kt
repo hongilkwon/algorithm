@@ -93,7 +93,6 @@ import java.util.Stack
 //            currentPlan.remainingTime = currentPlan.remainingTime - 1
 //        }
 //    }
-//
 //    answer = temp.toTypedArray()
 //    return answer
 //}
