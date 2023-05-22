@@ -11,7 +11,6 @@ import java.util.Stack
 
     과제를 끝낸 순서대로 이름을 배열에 담아
 
-
     3 ≤ plans의 길이 ≤ 1,000
     plans의 원소는 [name, start, playtime]의 구조로 이루어져 있습니다.
 
@@ -41,8 +40,6 @@ import java.util.Stack
 
     1000개의 plan 만약 전부 stack에 들어가서 남은시간을 가지고 있다면, 그부분을 해결하기위함인데,
     시간을 순회하기보단, plans 자체를 순회하는 로직으로 수정하는 구현이 좀더 옳아 보인다.
-
-
 
  */
 

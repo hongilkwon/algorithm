@@ -3,9 +3,13 @@ package programmers.lv2
 /*
     전략망을 둘로 나누기
 
-    완전탐색 문제.
+    완전탐색, 그래프탐색(dfs)
+
+    * 인접리스트 생성시 특별한 언급이 없다면,
+    양방향 그래프로 생성하여야 한다.
 
  */
+
 //import kotlin.math.min
 //import kotlin.math.abs
 //
