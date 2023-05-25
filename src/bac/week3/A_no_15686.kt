@@ -1,9 +1,9 @@
 package bac.week3
 
 /*
-치킨배달
+    치킨배달
 
- 도시의 치킨 거리는 모든 집의 치킨 거리의 합이
+     도시의 치킨 거리는 모든 집의 치킨 거리의 합
  */
 
 //import kotlin.math.*
@@ -16,27 +16,27 @@ package bac.week3
 //val chickenShop = mutableListOf<Pair<Int, Int>>()
 //var result = Int.MAX_VALUE
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
 //
-//    val bac.week5.concept.getN = info[0]
-//    rows = bac.week5.concept.getN + 1
-//    cols = bac.week5.concept.getN + 1
+//    val n = info[0]
+//    rows = n + 1
+//    cols = n + 1
 //
 //    val m = info[1]
 //
 //    map = Array(rows) { IntArray(cols) { 0 } }
 //
-//    for (i in 1..bac.week5.concept.getN) {
+//    for (i in 1..n) {
 //        val line = readLine().split(" ").map { it.toInt() }.toIntArray()
-//        for (j in 1..bac.week5.concept.getN) {
+//        for (j in 1..n) {
 //            map[i][j] = line[j - 1]
 //        }
 //    }
 //
-//    for (i in 1..bac.week5.concept.getN) {
-//        for (j in 1..bac.week5.concept.getN) {
+//    for (i in 1..n) {
+//        for (j in 1..n) {
 //            if (map[i][j] == 0) continue
 //            if (map[i][j] == 1) house.add(i to j)
 //            if (map[i][j] == 2) chickenShop.add(i to j)
@@ -44,7 +44,7 @@ package bac.week3
 //    }
 //
 //    val list = mutableListOf<Int>()
-//    combination(bac.week5.concept.getN = chickenShop.size, r = m, resultList = list)
+//    combination(n = chickenShop.size, r = m, resultList = list)
 //    println(result)
 //}
 //
@@ -69,7 +69,7 @@ package bac.week3
 //    return cityLen
 //}
 //
-//fun combination(bac.week5.concept.getN: Int, r: Int, start: Int = -1, resultList: MutableList<Int>) {
+//fun combination(n: Int, r: Int, start: Int = 0, resultList: MutableList<Int>) {
 //
 //    if (r == resultList.size) {
 //        /*logic*/
@@ -82,9 +82,9 @@ package bac.week3
 //        return
 //    }
 //
-//    for (idx in start + 1 until bac.week5.concept.getN) {
+//    for (idx in start  until n) {
 //        resultList.add(idx)
-//        combination(bac.week5.concept.getN, r, idx, resultList)
+//        combination(n, r, idx+1, resultList)
 //        resultList.remove(idx)
 //    }
 //}

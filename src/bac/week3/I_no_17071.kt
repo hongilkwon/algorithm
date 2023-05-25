@@ -1,6 +1,5 @@
 package bac.week3
 
 /*
-숨바꼭질5
-
+    숨바꼭질5
  */

@@ -2,7 +2,7 @@ package bac.week2.concept
 
 
 /*
-바이러스
+    바이러스
  */
 
 //var n = 0

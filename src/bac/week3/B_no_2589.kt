@@ -1,12 +1,13 @@
 package bac.week3
 
 /*
-보물섬
+    보물섬
 
-1. 가장 긴 연결된 육지를 찾는다.(불필요한 단계이다)
+    1. 가장 긴 연결된 육지를 찾는다.(불필요한 단계이다)
 
-2. 가징 긴 육지의 모든 위치에서 넓이 우선탐색을 한다.
+    2. 가징 긴 육지의 모든 위치에서 넓이 우선탐색을 한다.
  */
+
 
 //import java.util.LinkedList
 //import java.util.Queue
@@ -51,7 +52,7 @@ package bac.week3
 //}
 //
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
 //

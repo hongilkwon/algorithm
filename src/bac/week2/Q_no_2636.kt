@@ -1,8 +1,8 @@
 package bac.week2
 
 /*
-치즈
-2-Q
+    치즈
+    2-Q
  */
 
 //var rows = 0

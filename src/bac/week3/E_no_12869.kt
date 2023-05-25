@@ -2,12 +2,12 @@ package bac.week3
 
 
 /*
-뮤탈리스크
+    뮤탈리스크
 
-공격의 유형이 6개를 벗어나지 않는다 ->
-큐브 형태의 bfs 최단거리를 생각해야된다.
+    공격의 유형이 6개를 벗어나지 않는다 ->
+    큐브 형태의 bfs 최단거리를 생각해야된다.
 
-공격 유형에 따른 그래프를 생각할 수 있어야 풀 수 있다.
+    공격 유형에 따른 그래프를 생각할 수 있어야 풀 수 있다.
 
  */
 
@@ -55,14 +55,14 @@ package bac.week3
 //    return visited[0][0][0]
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
-//    val bac.week5.concept.getN = readLine().toInt()
+//    val n = readLine().toInt()
 //
 //    hpArr = readLine().split(" ").map { it.toInt() }.toIntArray()
 //    visited = Array(61) { Array(61) { Array(61) { 0 } } }
 //
-//    val triple = when (bac.week5.concept.getN) {
+//    val triple = when (n) {
 //        1 -> Triple(hpArr[0], 0, 0)
 //        2 -> Triple(hpArr[0], hpArr[1], 0)
 //        3 -> Triple(hpArr[0], hpArr[1], hpArr[2])

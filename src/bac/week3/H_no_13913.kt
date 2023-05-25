@@ -1,31 +1,29 @@
 package bac.week3
 
 /*
-숨바꼭질4
+    숨바꼭질4
 
-+ 어떤 순서로 이동해야되는가.
+    + 어떤 순서로 이동해야되는가.
 
+    val path = MutableList<MutableList<Int>>()
 
-val path = MutableList<MutableList<Int>>()
+    200_001 크기의 list 생성하니까 메모리가 부족했음.
 
-200_001 크기의 list 생성하니까 메모리가 부족했음.
+    path[np].add(np)
+    path[np].addAll(path[p])
 
-path[np].add(np)
-path[np].addAll(path[p])
+    최단거리를 가는데 지나친 모든 경로를 출력.
 
-최단거리를 가는데 지나친 모든 경로를 출력.
+    경로를 추적하는 배열을 만든다.
 
-경로를 추적하는 배열을 만든다.
+    5 -> 4 -> 8 -> 16 -> 17
 
-5 -> 4 -> 8 -> 16 -> 17
-
-path[4] = 5
-path[8] = 4
-path[16] = 8
-path[17] = 16
+    path[4] = 5
+    path[8] = 4
+    path[16] = 8
+    path[17] = 16
 
  */
-
 
 //import java.util.LinkedList
 //import java.util.Queue
@@ -61,9 +59,7 @@ path[17] = 16
 //        }
 //    }
 //}
-//
-//
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
 //

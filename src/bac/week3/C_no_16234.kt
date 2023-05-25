@@ -1,15 +1,12 @@
 package bac.week3
 
-
-
-
 /*
-인구이동
+    인구이동
 
-전반적인 문제의 이해랑 로직은 맞았지만
-dfs 구현함에 있어 구현력이 부족해서 틀렸다.
-
+    전반적인 문제의 이해랑 로직은 맞았지만
+    dfs 구현함에 있어 구현력이 부족해서 틀렸다.
  */
+
 
 //import kotlin.math.abs
 //
@@ -43,13 +40,13 @@ dfs 구현함에 있어 구현력이 부족해서 틀렸다.
 //    }
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
 //
-//    val bac.week5.concept.getN = info[0]
-//    rows = bac.week5.concept.getN
-//    cols = bac.week5.concept.getN
+//    val n = info[0]
+//    rows = n
+//    cols = n
 //
 //    l = info[1]
 //    r = info[2]

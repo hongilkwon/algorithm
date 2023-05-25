@@ -3,13 +3,14 @@ package bac.week3
 /*
    불
 
-탈출 성공 및 실패의 기준을 잡는게 매우 어려웠다.
-2개 점에서 bfs 결과값을 비교,
-또한 시작점이 여러개인 bfs를 사용시(불이 퍼지는 과정) 나타날수 있는 결과를 예측하기 힘들다.
+    탈출 성공 및 실패의 기준을 잡는게 매우 어려웠다.
+    2개 점에서 bfs 결과값을 비교,
+    또한 시작점이 여러개인 bfs를 사용시(불이 퍼지는 과정) 나타날수 있는 결과를 예측하기 힘들다.
 
-특이케이스
-- 불이 존재하지 않을 수 있다.
+    특이케이스
+    - 불이 존재하지 않을 수 있다.
 
+    *틀린 문제 나중에 다시 푼다.
  */
 
 //import java.util.LinkedList
@@ -85,7 +86,7 @@ package bac.week3
 //}
 //
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
 //
