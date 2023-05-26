@@ -1,14 +1,14 @@
 package bac.week6.concept
 
-//fun binarySearch(arr: Array<Int>, k: Int): Int {
+//fun binarySearch(arr: Array<Int>, key: Int): Int {
 //    var left = 0
 //    var right = arr.lastIndex
 //
 //    while (left <= right) {
 //        val mid = (left + right) / 2
-//        if (arr[mid] < k) {
+//        if (arr[mid] < key) {
 //            left = mid + 1
-//        } else if (arr[mid] > k) {
+//        } else if (arr[mid] > key) {
 //            right = mid - 1
 //        } else {
 //            return mid
@@ -17,49 +17,49 @@ package bac.week6.concept
 //    return -1
 //}
 //
-//fun lowerBound(arr: Array<Int>, k: Int): Int {
-//    var left = 0
-//    var right = arr.lastIndex
-//
-//    if (arr.last() < k) return arr.size
-//    if (arr.first() > k) return -1
+///*
+//    lower_bound
+//    key 보다 "크거나 같은 값" 중 가장 처음 나오는 index
+// */
+//fun lowerBound(arr: Array<Int>, start: Int = 0, end: Int = arr.lastIndex, key: Int): Int {
+//    var left = start
+//    var right = end
 //
 //    while (left < right) {
 //        val mid = (left + right) / 2
 //
-//        if (arr[mid] < k) {
-//            left = mid + 1
-//        } else {
+//        if (arr[mid] >= key) {
 //            right = mid
+//        } else {
+//            left = mid + 1
 //        }
 //    }
-//    return left
+//    return right
 //}
 //
-//fun upperBound(arr: Array<Int>, k: Int): Int {
-//    var left = 0
-//    var right = arr.lastIndex
-//
-//    if (arr.last() < k) return arr.size
-//    if (arr.first() > k) return -1
+///*
+//    upper_bound
+//    key 보다 "큰 값"이 가장 처음 나오는 index
+// */
+//fun upperBound(arr: Array<Int>, start: Int = 0, end: Int = arr.lastIndex, key: Int): Int {
+//    var left = start
+//    var right = end
 //
 //    while (left < right) {
 //        val mid = (left + right) / 2
 //
-//        if (arr[mid] <= k) {
-//            left = mid + 1
-//        } else {
+//        if (arr[mid] > key) {
 //            right = mid
+//        } else {
+//            left = mid + 1
 //        }
 //    }
 //    return right
 //}
 //
 //fun main() {
-//
 //    val arr = arrayOf(1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5)
 //
-//    println(binarySearch(arr, 4))
-//    println(lowerBound(arr, 4))
-//    println(upperBound(arr, 4))
+//    println(lowerBound(arr, key= 4))
+//    println(upperBound(arr, key= 4))
 //}

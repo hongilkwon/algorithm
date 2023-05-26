@@ -1,19 +1,20 @@
 package bac.week6.concept
-//
-//
-///*
-//    가장 긴 증가하는 부분 수열
-//    N (1 ≤ N ≤ 1,000)
-//
-//     1 2 2 3
-//
-//           o
-//       o   o
-//       o o o
-//     o o o o
-//
-//   */
-//
+
+
+/*
+    가장 긴 증가하는 부분 수열
+    N (1 ≤ N ≤ 1,000)
+
+     1 2 2 3
+
+           o
+       o   o
+       o o o
+     o o o o
+
+   */
+
+
 //import kotlin.math.max
 //
 //var n = 0
