@@ -15,8 +15,7 @@ import kotlin.math.pow
     0하고 and 연산을 하면 피연산자는 0으로 변함. -> 이 성질을 이용함
 
     1. 비트배열이 주어졌을때, idx 비트 0으로 만들기.
-
-    bac.week5.concept.getN = bac.week5.concept.getN and (1 shl idx).inv()
+    n = n and (1 shl idx).inv()
 
     2. 비트배열이 주어졌을때, idx 비트 반전 시키기.
 
@@ -28,16 +27,16 @@ import kotlin.math.pow
     1하고 xor 연산을 하면, 피연산자는 반전됨 -> 이 성질을 이용함
     0하고 xor 연산을 하면, 피연산자는 변하지 않음.
 
-    bac.week5.concept.getN = bac.week5.concept.getN xor (1 shl idx)
+    n = n xor (1 shl idx)
 
    3. 2진수 표현 배열의 1이 최초로 나오는 idx 찾기
 
-   val idx = (bac.week5.concept.getN and -bac.week5.concept.getN)
+   val idx = (n and -n)
 
    4. 크기가 n인 2진수 표현 배열 모든 비트를 켜기
 
    2의 n제곱 -1
-   (1 shl bac.week5.concept.getN) -1
+   (1 shl n) - 1
 
    5. idx 비트를 1로 만들기( 0 -> 1,  1 -> 1)
 
@@ -49,14 +48,14 @@ import kotlin.math.pow
     1 하고 or 연산을 하면, 피연산자는 1이됨 -> 이 성질을 이용함.
     0 하고 or 연산을 하면, 피연산자는 변하지 않음.
 
-     bac.week5.concept.getN = bac.week5.concept.getN or (1 shl idx)
+     n = n or (1 shl idx)
 
     6. idx 비트가 있는지 확인하기
     1과 and 연산하면 피연산자가 그대로 이기 떄문에
     그 결과가 1이면 참 0이면 거짓
 
-    ( bac.week5.concept.getN and (1 shl idx) ) == 1
-
+    (n and (1 shl idx)) != 0
+    주의)  (n and (1 shl idx)) == 1 로 하면 안됨.
  */
 
 /*
