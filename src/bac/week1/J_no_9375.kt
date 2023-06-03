@@ -13,31 +13,31 @@ package bac.week1
  */
 
 
-fun main() = with(System.`in`.bufferedReader()) {
-
-    val testCase = readLine().toInt()
-
-    for (i in 1..testCase) {
-
-        val cNum = readLine().toInt()
-        if (cNum == 0) {
-            println(0)
-            continue
-        }
-
-        val map = mutableMapOf<String, Int>()
-
-        var result: Long = 1
-
-        for (j in 1..cNum) {
-            val clothes = readLine().split(" ")[1]
-            map[clothes] = if (map.containsKey(clothes)) map[clothes]!! + 1 else 1
-        }
-
-        map.forEach { (k, v) ->
-            result *= v + 1
-        }
-
-        println(result - 1)
-    }
-}
+//fun main() = with(System.`in`.bufferedReader()) {
+//
+//    val testCase = readLine().toInt()
+//
+//    for (i in 1..testCase) {
+//
+//        val cNum = readLine().toInt()
+//        if (cNum == 0) {
+//            println(0)
+//            continue
+//        }
+//
+//        val map = mutableMapOf<String, Int>()
+//
+//        var result: Long = 1
+//
+//        for (j in 1..cNum) {
+//            val clothes = readLine().split(" ")[1]
+//            map[clothes] = if (map.containsKey(clothes)) map[clothes]!! + 1 else 1
+//        }
+//
+//        map.forEach { (k, v) ->
+//            result *= v + 1
+//        }
+//
+//        println(result - 1)
+//    }
+//}

@@ -11,12 +11,15 @@ package bac.week7
     n은 정점의 개수 O(x^n)
 
     정점을 방문하는 순서는 상관이 없다.
-
     {a,b,c} -> d
     {a,c,b} -> d
 
     dp/bitMasking/알고리즘 노하우
     너무 어려운 문제다.
+
+    하향식 방법
+    메모이제이션 기준.
+    (현재 node, 이전까지 방문한 node들)
  */
 
 //import kotlin.math.*
@@ -27,7 +30,7 @@ package bac.week7
 //val case = Array(16) { Array(1 shl 16) { -1 } }
 //
 //fun go(node: Int, visited: Int): Int {
-//    // 모든 정점을 방문 하고, 순회 즉, 시작 노드로 돌아와야 종료.
+//    // 모든 정점을 방문 하고, 순회해야 즉,시작 노드로 돌아와야 종료.
 //    if (visited == (1 shl n) - 1) {
 //        return if(w[node][0] == 0) 1_000_000_000 else w[node][0]
 //    }
@@ -35,7 +38,6 @@ package bac.week7
 //    if (case[node][visited] != -1) {
 //        return case[node][visited]
 //    }
-//
 //    var minDis = 1_000_000_000
 //    for (i in 0 until n) {
 //        // 이미 방문한 노드

@@ -18,12 +18,17 @@ package bac.week7
 
    "특정 포인트로 갈수 있는 방법을 정할 때, 이동하는 방법을 나눠서 생각해야된다"
 
+    상향식 방법.
+    테이블 구성 기준
+    (y좌표, x좌표, 방향)
+
  */
 
 //var n = 0
 //
 //lateinit var map: Array<Array<Int>>
 //lateinit var case: Array<Array<Array<Int>>>
+//
 //fun check(y: Int, x: Int, dir: Int): Boolean {
 //
 //    if (y !in 0 until n || x !in 0 until n) return false
