@@ -17,27 +17,27 @@ package bac.week7
  */
 
 
-var n = 0
-var k = 0
-
-lateinit var coins: Array<Int>
-
-val case = Array(10_001) { 0 }
-fun main() = with(System.`in`.bufferedReader()) {
-    val info = readLine().split(" ").map { it.toInt() }
-    n = info[0]
-    k = info[1]
-    coins = Array(n) {
-        readLine().toInt()
-    }
-
-    case[0] = 1
-    for (i in 0 until n ){
-        val coin = coins[i]
-        for(j in coin .. k){
-            case[j] += case[j - coin]
-        }
-    }
-    println(case[k])
-    Unit
-}
+//var n = 0
+//var k = 0
+//
+//lateinit var coins: Array<Int>
+//
+//val case = Array(10_001) { 0 }
+//fun main() = with(System.`in`.bufferedReader()) {
+//    val info = readLine().split(" ").map { it.toInt() }
+//    n = info[0]
+//    k = info[1]
+//    coins = Array(n) {
+//        readLine().toInt()
+//    }
+//
+//    case[0] = 1
+//    for (i in 0 until n ){
+//        val coin = coins[i]
+//        for(j in coin .. k){
+//            case[j] += case[j - coin]
+//        }
+//    }
+//    println(case[k])
+//    Unit
+//}
