@@ -39,7 +39,6 @@ package bac.week7
 //            val candyInfo = readLine().split(" ")
 //            val candyCal = candyInfo[1].split(".").map { it.toInt() }
 //            candyArr[i] = candyInfo[0].toInt() to candyCal[0]*100 + candyCal[1]
-//            case[(candyArr[i].second)] = candyArr[i].first
 //        }
 //
 //        for (i in 0 until n) {
