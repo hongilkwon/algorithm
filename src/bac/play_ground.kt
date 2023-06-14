@@ -1,17 +1,14 @@
-import java.util.Stack
-
 
 fun main() {
-    val tempList = mutableListOf<Int>()
-    val stack = Stack<Int>()
-    stack.add(3)
-    stack.add(1)
-    println(stack)
 
-    tempList.add(stack.pop())
-    tempList.add(stack.pop())
-    println(tempList.joinToString())
+    val arr = Array(10){ it }
 
-    stack.addAll(tempList.reversed())
-    println(stack)
+    for (size in 2 until arr.size) {
+        println("size: $size")
+        for (i in 0 until arr.size - size) {
+            print("$i ~ ${i+size}, ")
+        }
+        println()
+    }
+
 }
