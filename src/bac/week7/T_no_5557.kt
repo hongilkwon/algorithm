@@ -1,7 +1,5 @@
 package bac.week7
 
-import kotlin.math.min
-
 /*
     1학년
 
@@ -12,8 +10,9 @@ import kotlin.math.min
     메모이제이션을 할떄 동일한 값이 연속적으로 사용되도록,
     상태를 잡아야 되는데 그게 너무 크면 속도가 매우 느리다.
 
-
  */
+
+import kotlin.math.min
 
 //var n = 0
 //lateinit var arr: Array<Int>
