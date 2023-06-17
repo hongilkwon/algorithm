@@ -66,26 +66,24 @@ package bac.week7
 //var min = "11111111111111111111111111111111111111111111111111"
 //var case = Array(101) { min }
 //fun calMinValue() {
-//
+//    case[0]= ""
+//    for (i in 2 until case.size) {
+//        for (j in 0 until required.size) {
+//            // 성냥의 개수가 안된다면
+//            if (i - required[j] < 0) continue
+//            // 첫번쨰가 0이면
+//            if (j == 0 && case[i - required[j]] == "") continue
+//            case[i] = minStr(case[i], case[i - required[j]]+j.toString())
+//        }
+//    }
 //}
 //
 //fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val tc = readLine().toInt()
+//    calMinValue()
 //    repeat(tc) {
 //        n = readLine().toInt()
-//
-//        case[0]= ""
-//        for (i in 2 until case.size) {
-//            for (j in 0 until required.size) {
-//                // 성냥의 개수가 안된다면
-//                if (i - required[j] < 0) continue
-//                // 첫번쨰가 0이면
-//                if (j == 0 && case[i - required[j]] == "") continue
-//                case[i] = minStr(case[i], case[i - required[j]]+j.toString())
-//            }
-//        }
-//
 //        println("${case[n]} ${calMaxValue(n)}")
 ////        case = Array(101){ min }
 //    }
