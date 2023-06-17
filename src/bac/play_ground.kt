@@ -1,14 +1,13 @@
 
-fun main() {
-
-    val arr = Array(10){ it }
-
-    for (size in 2 until arr.size) {
-        println("size: $size")
-        for (i in 0 until arr.size - size) {
-            print("$i ~ ${i+size}, ")
-        }
-        println()
-    }
-
-}
+//
+//fun minStr(a: String, b: String): String {
+//    if (a.length == b.length)
+//        return if (a < b) a else b
+//    else
+//        return if (a.length < b.length) a else b
+//}
+//fun main() {
+//
+//    val temp = minStr("10","11")
+//    println(temp)
+//}
