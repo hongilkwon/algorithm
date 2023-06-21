@@ -1,13 +1,13 @@
+import java.util.*
 
-//
-//fun minStr(a: String, b: String): String {
-//    if (a.length == b.length)
-//        return if (a < b) a else b
-//    else
-//        return if (a.length < b.length) a else b
-//}
-//fun main() {
-//
-//    val temp = minStr("10","11")
-//    println(temp)
-//}
+fun main() {
+
+    val pq = PriorityQueue<Pair<Int, Int>>(compareBy { it.second })
+
+    pq.add(6 to 4)
+    pq.add(10 to 5)
+    pq.add(1 to 8)
+    pq.add(4 to 1)
+
+    println(pq.poll())
+}
