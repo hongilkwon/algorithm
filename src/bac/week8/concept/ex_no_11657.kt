@@ -19,55 +19,55 @@ package bac.week8.concept
 
  */
 
-const val INF = Long.MAX_VALUE
-
-var n = 0
-var m = 0
-
-lateinit var edgeArr: Array<Triple<Int, Int, Int>>
-lateinit var dist: Array<Long>
-
-var containsCycle = false
-fun main() = with(System.`in`.bufferedReader()) {
-
-    val info = readLine().split(" ").map { it.toInt() }
-
-    n = info[0]
-    m = info[1]
-    edgeArr = Array(m + 1) { Triple(0, 0, 0) }
-
-    for (i in 1..m) {
-        val eInfo = readLine().split(" ").map { it.toInt() }
-        edgeArr[i] = Triple(eInfo[0], eInfo[1], eInfo[2])
-    }
-
-
-    dist = Array(n + 1) { INF }
-    dist[1] = 0
-
-    // 모든 node를 순회한다.
-    for (i in 1..n) {
-        // 반복마다 모든 간선을 확인 한다.
-        for (j in 1..m) {
-            val curNode = edgeArr[j].first
-            val nextNode = edgeArr[j].second
-            val weight = edgeArr[j].third
-            //
-            if (dist[curNode] != INF && dist[nextNode] > dist[curNode] + weight) {
-                if (i == n) {
-                    containsCycle = true
-                }
-                dist[nextNode] = dist[curNode] + weight
-            }
-        }
-    }
-
-//    println(dist.joinToString(" "))
-    if (containsCycle) {
-        println(-1)
-    } else {
-        for (i in 2 until dist.size) {
-            if (dist[i] == INF) println(-1) else println(dist[i])
-        }
-    }
-}
+//const val INF = Long.MAX_VALUE
+//
+//var n = 0
+//var m = 0
+//
+//lateinit var edgeArr: Array<Triple<Int, Int, Int>>
+//lateinit var dist: Array<Long>
+//
+//var containsCycle = false
+//fun main() = with(System.`in`.bufferedReader()) {
+//
+//    val info = readLine().split(" ").map { it.toInt() }
+//
+//    n = info[0]
+//    m = info[1]
+//    edgeArr = Array(m + 1) { Triple(0, 0, 0) }
+//
+//    for (i in 1..m) {
+//        val eInfo = readLine().split(" ").map { it.toInt() }
+//        edgeArr[i] = Triple(eInfo[0], eInfo[1], eInfo[2])
+//    }
+//
+//
+//    dist = Array(n + 1) { INF }
+//    dist[1] = 0
+//
+//    // 모든 node를 순회한다.
+//    for (i in 1..n) {
+//        // 반복마다 모든 간선을 확인 한다.
+//        for (j in 1..m) {
+//            val curNode = edgeArr[j].first
+//            val nextNode = edgeArr[j].second
+//            val weight = edgeArr[j].third
+//            //
+//            if (dist[curNode] != INF && dist[nextNode] > dist[curNode] + weight) {
+//                if (i == n) {
+//                    containsCycle = true
+//                }
+//                dist[nextNode] = dist[curNode] + weight
+//            }
+//        }
+//    }
+//
+////    println(dist.joinToString(" "))
+//    if (containsCycle) {
+//        println(-1)
+//    } else {
+//        for (i in 2 until dist.size) {
+//            if (dist[i] == INF) println(-1) else println(dist[i])
+//        }
+//    }
+//}
