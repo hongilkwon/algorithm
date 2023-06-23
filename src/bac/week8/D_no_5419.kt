@@ -1,9 +1,11 @@
 package bac.week8
 
 /*
-    RPG
+    북서풍
  */
 
 
 fun main() = with(System.`in`.bufferedReader()) {
+
+
 }

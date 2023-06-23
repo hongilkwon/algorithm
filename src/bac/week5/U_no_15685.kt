@@ -1,7 +1,5 @@
 package bac.week5
 
-import bac.week1.list
-
 /*
   드래곤 커브
 
