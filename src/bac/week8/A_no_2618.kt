@@ -8,8 +8,6 @@ package bac.week8
     두 사건이 발생한 위치가 같을 수 있다.
 
     dp 로 인식하기 쉽지 않았다.
-
-
  */
 
 //import kotlin.math.*

@@ -18,40 +18,43 @@ package bac.week8
     1 2 3 5 8 13 21 34 55
   */
 
-var n = 0
-var m = 0
-
-// idx -> 앉을 수 있는 방법
-val case = Array(41) { -1 }
-val seatArr = Array(41) { 0 }
-fun go(idx: Int): Int {
-
-    if (idx >= n) return 1
-
-    // 좌석에 앉을 수 없는 상태라면, 즉, vip 고정석이라면,
-    if (seatArr[idx] == 1) return go(idx + 1)
-
-    if (case[idx] != -1) return case[idx]
-
-    var ret = 0
-    if (seatArr[idx + 1] == 0)
-        ret += (go(idx + 2) + go(idx + 1))
-    else
-        ret += go(idx + 1)
-
-    case[idx] = ret
-    return case[idx]
-}
-
-fun main() = with(System.`in`.bufferedReader()) {
-
-    n = readLine().toInt()
-    m = readLine().toInt()
-
-    for (i in 1 .. m){
-        val vip = readLine().toInt()
-        seatArr[vip] = 1
-    }
-
-    println(go(1))
-}
+//var n = 0
+//var m = 0
+//
+//// idx -> 앉을 수 있는 방법
+//val case = Array(41) { -1 }
+//val seatArr = Array(41) { 0 }
+//fun go(idx: Int): Int {
+//
+//    if (idx >= n) return 1
+//
+//    // vip 고정석일 경우
+//    if (seatArr[idx] != 0){
+//        return go(idx + 1)
+//    }
+//
+//    if (case[idx] != -1) return case[idx]
+//
+//    // 이전 노드에서 결과를 받아서 반환.
+//    var ret = 0
+//    if (seatArr[idx + 1] == 0)
+//        ret += (go(idx + 2) + go(idx + 1))
+//    else
+//        ret += go(idx + 1)
+//
+//    case[idx] = ret
+//    return case[idx]
+//}
+//
+//fun main() = with(System.`in`.bufferedReader()) {
+//
+//    n = readLine().toInt()
+//    m = readLine().toInt()
+//
+//    for (i in 1 .. m){
+//        val vip = readLine().toInt()
+//        seatArr[vip] = vip
+//    }
+//
+//    println(go(8))
+//}
