@@ -11,7 +11,7 @@ package bac.week8.concept
      1인경우 변경
      2인경우 구간합 쿼리.
  */
-//
+
 //// 숫자의 개수
 //var n: Long= 0
 //

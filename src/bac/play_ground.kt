@@ -2,7 +2,6 @@ import java.util.*
 
 fun main() {
 
-
-    println("9" < "12")
+    println(8 and -8)
 
 }
