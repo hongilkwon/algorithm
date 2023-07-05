@@ -1,7 +1,7 @@
 package bac.week8
 
 /*
-    구간합구하기3
+    거의 최단경로
  */
 
 fun main() = with(System.`in`.bufferedReader()) {

@@ -16,8 +16,8 @@ package bac.week7
 
     하향식 방법
     기준(point(y, x))
-    +dfs
-    +backtracking
+    + dfs
+    + backtracking
 
   */
 
