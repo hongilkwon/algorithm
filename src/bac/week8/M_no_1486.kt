@@ -48,6 +48,9 @@ package bac.week8
 //val dx = arrayOf(0, 1, 0, -1)
 //
 //val wMatrix = Array(2526) { Array(2526) { INF } }
+//
+///*lateinit var wMatrix: Array<Array<Int>>
+//wMatrix = Array(n * 100 + m + 1) { Array(n * 100 + m + 1) { INF } }*/
 //fun initWeightMatrix() {
 //
 //    // 대각선 요소 초기화
@@ -58,8 +61,8 @@ package bac.week8
 //    }
 //
 //    // 연결 노드 가중치 담기
-//    for (y in 0 until map.size) {
-//        for (x in 0 until map.first().size) {
+//    for (y in 0 until n) {
+//        for (x in 0 until m) {
 //            for (i in 0 until 4) {
 //
 //                val ny = y + dy[i]
@@ -69,6 +72,7 @@ package bac.week8
 //
 //                val uHeight = map[y][x]
 //                val vHeight = map[ny][nx]
+//
 //                val diff = abs(uHeight - vHeight)
 //
 //                if (t >= diff) {
@@ -113,10 +117,17 @@ package bac.week8
 //
 //    for (i in 0 until n) {
 //        map[i] = readLine().toCharArray().map {
-//            if (it.code in 'A'.code..'Z'.code) {
-//                it.code - 'A'.code
-//            } else {
+////            if (it.code in 'A'.code..'Z'.code) {
+////                it.code - 'A'.code
+////            } else {
+////                it.code - 'a'.code + 26
+////            }
+//
+//            if (it.code >= 'a'.code) {
 //                it.code - 'a'.code + 26
+//
+//            } else {
+//                it.code - 'A'.code
 //            }
 //        }.toTypedArray()
 //    }
@@ -134,7 +145,6 @@ package bac.week8
 //
 //    var answer = map[0][0]
 //    for (i in nodes) {
-//        if (i == 0) continue
 //        val time = wMatrix[0][i] + wMatrix[i][0]
 //        if (d >= time) {
 //            answer = max(answer, map[i / 100][i % 100])

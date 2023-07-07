@@ -49,21 +49,22 @@ package bac.week8.concept
 //        adj[edgeInfo[0]].add(edgeInfo[1] to edgeInfo[2])
 //    }
 //
-//    priorityQueue.add(k to 0)
 //    distance[k] = 0
+//    priorityQueue.add(k to 0)
 //
 //    while (priorityQueue.isNotEmpty()) {
+//        // 현재 노드에서 가장 짧은 비용을 꺼냄.
+//        val edge = priorityQueue.poll()
 //
-//        val node = priorityQueue.poll()
-//        // 이미 최소값이 정해진 노드라면,
-//        if (distance[node.first] < node.second)
+//        //  거리테이블에 기록된 값이 새로 연상되어 완화된 값보다 작으면 --> 이미 방문되어 최소값이 정해진 노드
+//        if (distance[edge.first] < edge.second)
 //            continue
 //
-//        for (next in adj[node.first]) {
+//        for (next in adj[edge.first]) {
 //            val idx = next.first
 //            val w = next.second
-//            if (distance[idx] > distance[node.first] + w) {
-//                distance[idx] = distance[node.first] + w
+//            if (distance[idx] > distance[edge.first] + w) {
+//                distance[idx] = distance[edge.first] + w
 //                priorityQueue.add(idx to distance[idx])
 //            }
 //        }
