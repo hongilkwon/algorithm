@@ -2,7 +2,10 @@ package bac.week2
 
 /*
     치즈
-    2-Q
+    탐색의 원리를 묻는 문제.
+
+    더이상 탐색을 못하도록 함으로써, 치즈의 내부를 못들어가게 한다
+    -> 겉면만 탐색한다.
  */
 
 //var rows = 0
@@ -13,7 +16,6 @@ package bac.week2
 //
 //val dy = arrayOf(-1, 0, 1, 0)
 //val dx = arrayOf(0, 1, 0, -1)
-//
 //
 //fun dfs(point: Pair<Int, Int>, cPoint: MutableList<Pair<Int, Int>>) {
 //
@@ -34,17 +36,18 @@ package bac.week2
 //    }
 //}
 //
+//// 치즈가 다 녹았는지 확인.
 //fun check(map: Array<IntArray>): Boolean {
 //    for (i in 0 until  map.size){
 //        for (j in 0 until map.first().size){
-//            if (map[i][j] != 0 )
+//            if (map[i][j] != 0)
 //                return true
 //        }
 //    }
 //    return false
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
 //

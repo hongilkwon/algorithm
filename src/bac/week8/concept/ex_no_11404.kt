@@ -19,50 +19,50 @@ package bac.week8.concept
 
  */
 
-import kotlin.math.min
-
-const val INF = 1_000_000_000
-
-// n = 노드개수, m = 간선개수
-var n = 0
-var m = 0
-
-lateinit var distance: Array<Array<Int>>
-fun main() = with(System.`in`.bufferedReader()) {
-
-    n = readLine().toInt()
-    m = readLine().toInt()
-    distance = Array(n + 1) { Array(n + 1) { INF } }
-
-    for (i in 1 until distance.size) {
-        for (j in 1 until distance.size) {
-            if (i == j) distance[i][j] = 0
-        }
-    }
-
-    for (i in 1..m) {
-        val edgeInfo = readLine().split(" ").map { it.toInt() }
-        val u = edgeInfo[0]
-        val v = edgeInfo[1]
-        val w = edgeInfo[2]
-        distance[u][v] = min(distance[u][v], w)
-    }
-
-    for (k in 1 until distance.size) {
-        for (i in 1 until distance.size) {
-            for (j in 1 until distance.size) {
-                distance[i][j] = min(distance[i][j], distance[i][k] + distance[k][j])
-            }
-        }
-    }
-
-    for (i in 1 until distance.size) {
-        for (j in 1 until distance.size) {
-            if (distance[i][j] == INF)
-                print("${0} ")
-            else
-                print("${distance[i][j]} ")
-        }
-        println()
-    }
-}
+//import kotlin.math.min
+//
+//const val INF = 1_000_000_000
+//
+//// n = 노드개수, m = 간선개수
+//var n = 0
+//var m = 0
+//
+//lateinit var distance: Array<Array<Int>>
+//fun main() = with(System.`in`.bufferedReader()) {
+//
+//    n = readLine().toInt()
+//    m = readLine().toInt()
+//    distance = Array(n + 1) { Array(n + 1) { INF } }
+//
+//    for (i in 1 until distance.size) {
+//        for (j in 1 until distance.size) {
+//            if (i == j) distance[i][j] = 0
+//        }
+//    }
+//
+//    for (i in 1..m) {
+//        val edgeInfo = readLine().split(" ").map { it.toInt() }
+//        val u = edgeInfo[0]
+//        val v = edgeInfo[1]
+//        val w = edgeInfo[2]
+//        distance[u][v] = min(distance[u][v], w)
+//    }
+//
+//    for (k in 1 until distance.size) {
+//        for (i in 1 until distance.size) {
+//            for (j in 1 until distance.size) {
+//                distance[i][j] = min(distance[i][j], distance[i][k] + distance[k][j])
+//            }
+//        }
+//    }
+//
+//    for (i in 1 until distance.size) {
+//        for (j in 1 until distance.size) {
+//            if (distance[i][j] == INF)
+//                print("${0} ")
+//            else
+//                print("${distance[i][j]} ")
+//        }
+//        println()
+//    }
+//}

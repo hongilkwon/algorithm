@@ -47,7 +47,7 @@ package bac.week8
 //val dy = arrayOf(-1, 0, 1, 0)
 //val dx = arrayOf(0, 1, 0, -1)
 //
-//val wMatrix = Array(2526) { Array(2526) { INF } }
+//val wMatrix = Array(2526) { IntArray(2526) { INF } }
 //
 ///*lateinit var wMatrix: Array<Array<Int>>
 //wMatrix = Array(n * 100 + m + 1) { Array(n * 100 + m + 1) { INF } }*/
@@ -150,7 +150,6 @@ package bac.week8
 //            answer = max(answer, map[i / 100][i % 100])
 //        }
 //    }
-//
 //    println(answer)
 //    Unit
 //}

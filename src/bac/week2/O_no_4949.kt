@@ -10,35 +10,40 @@ package bac.week2
         (readLine() ?: break)
     }
 
+    * [)]
  */
 
 //import java.util.Stack
 //
 //fun main() = with(System.`in`.bufferedReader()) {
 //
+//    val stack = Stack<Char>()
+//    val charArr = arrayOf('(', ')', '[', ']')
+//
 //    while (true) {
 //
 //        val str = readLine().toString()
-//
 //        if (str == ".") break
 //
-//        val stack = Stack<Char>()
-//        val charArr = arrayOf('(', ')', '[', ']')
+//        stack.clear()
 //        for (i in 0 until str.length) {
+//            // stack이 비어있고, 괄호라면. 넣음.
 //            if (stack.empty() && str[i] in charArr) {
 //                stack.add(str[i])
 //                continue
 //            }
+//            // 괄호짝 맞추기.
 //            if (stack.isNotEmpty() && str[i] in charArr) {
-//                if (str[i] == ')' && stack.peek() =='(') {
+//                if (str[i] == ')' && stack.peek() == '(') {
 //                    stack.pop()
-//                } else if (str[i] == ']' && stack.peek() =='[') {
-//                   stack.pop()
+//                } else if (str[i] == ']' && stack.peek() == '[') {
+//                    stack.pop()
 //                } else {
 //                    stack.add(str[i])
 //                }
 //                continue
 //            }
+//            // 1문장 종료.
 //            if (str[i] == '.')
 //                break
 //        }

@@ -41,7 +41,6 @@ package bac.week8.concept
 //        edgeArr[i] = Triple(eInfo[0], eInfo[1], eInfo[2])
 //    }
 //
-//
 //    dist = Array(n + 1) { INF }
 //    dist[1] = 0
 //
@@ -52,7 +51,7 @@ package bac.week8.concept
 //            val curNode = edgeArr[j].first
 //            val nextNode = edgeArr[j].second
 //            val weight = edgeArr[j].third
-//            //
+//
 //            if (dist[curNode] != INF && dist[nextNode] > dist[curNode] + weight) {
 //                if (i == n) {
 //                    containsCycle = true

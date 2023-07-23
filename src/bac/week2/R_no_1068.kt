@@ -1,88 +1,82 @@
 package bac.week2
 
 /*
- 트리
 
- 트리는 root 중요하다.
+     트리
+     * 사이클이 없는 연결 그래프이다.
 
- 시간날떄 반드시 다시 푼다.
+     트리
+     - 최상위 루트 노드가 중요하다.
+     - 루트 노드에서 탐색을 시작하면, 반드시 다른 노드로 갈수있는 "1개의 경로"가 존재한다
 
- 1. 탐색을 하지 않는다.
- 2. 실제로 지운 트리를 생성한다.
+     실제로 트리를 지운것을 생성하기에는 쉽지가 않다 ---> 삭제된 노드를 만나게 되면 트리를 지운다.
 
  */
 
-//lateinit var adj: Array<MutableList<Int>>
+
+//var n = 0
+//lateinit var adjList: Array<MutableList<Int>>
 //var root = 0
 //var removed = 0
-
-//fun treeDfs(node: Int): Int {
 //
-//    if (adj[node].isEmpty())
+//lateinit var visited: IntArray
+//
+//fun dfs(idx: Int): Int {
+//
+//    visited[idx] = 1
+//
+//    if (idx == removed){
+//        return 0
+//    }
+//
+//    if (adjList[idx].isEmpty()) {
 //        return 1
-//
-//    var leafCnt = 0
-//
-//    for (newNode in adj[node]) {
-//        if (newNode == removed) continue
-//        leafCnt += treeDfs(newNode)
 //    }
 //
-//    return leafCnt
-//}
-
-//fun treeDfs(node: Int): Int {
-//    var ret = 0
 //    var child = 0
+//    for (next in adjList[idx]) {
+//        if (visited[next] == 1) continue
 //
-//    for (newNode in adj[node]) {
-//        if (newNode == removed) continue
-//        ret += treeDfs(newNode)
-//        child += 1
+//        child += dfs(next)
 //    }
+//    // 자식이 하나도 없으면 자신이 리프노드다.
 //    if (child == 0) return 1
-//    return ret
+//    return child
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
-//    val bac.week5.concept.getN = readLine().toInt()
+//    n = readLine().toInt()
 //    val parentInfo = readLine().split(" ").map { it.toInt() }.toIntArray()
 //
-//    adj = Array(bac.week5.concept.getN) { mutableListOf() }
-//
+//    adjList = Array(n) { mutableListOf() }
 //    for (i in 0 until parentInfo.size) {
 //        if (parentInfo[i] == -1) {
 //            root = i
 //        } else {
-//            adj[parentInfo[i]].add(i)
+//            adjList[parentInfo[i]].add(i)
 //        }
 //    }
-//
 //    removed = readLine().toInt()
 //
+//    visited = IntArray(n) { 0 }
 //    if (root == removed) {
 //        println(0)
-//    }else{
-//        println(treeDfs(root))
+//    } else {
+//        val leafCnt = dfs(root)
+//        println(leafCnt)
 //    }
 //}
 
-//fun treeDfs(node: Int) {
+//fun dfs(node: Int): Int {
+//    var ret = 0
+//    var child = 0
 //
-//    if (visited[node] == 1) {
-//        return
+//    for (newNode in adjList[node]) {
+//        if (newNode == removed) continue
+//        ret += dfs(newNode)
+//        child += 1
 //    }
-//    visited[node] = 1
-//
-//    /*logic*/
-//    if (adj[node].isEmpty()){
-//        cnt += 1
-//        return
-//    }
-//
-//    for (newNode in adj[node]) {
-//        treeDfs(newNode)
-//    }
-//    adj[node] = mutableListOf()
+//    if (child == 0) return 1
+//    return ret
 //}
