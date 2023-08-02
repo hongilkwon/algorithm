@@ -4,6 +4,16 @@ package bac.week3
     치킨배달
 
      도시의 치킨 거리는 모든 집의 치킨 거리의 합
+
+      N(2 ≤ N ≤ 50) 지도의 크기
+      M(1 ≤ M ≤ 13) 골라야되는 치킨집,
+
+      완전탐색 문제
+      모든 치킨집중에 m개 빼고 폐업시키고, 치킨 거리를 구한 값의 최소값을 구한다.
+
+      * 특정한 의미를 가지는 좌표들은 따로 자료구조를 생성해서 담아본다.
+
+
  */
 
 //import kotlin.math.*
@@ -72,7 +82,7 @@ package bac.week3
 //fun combination(n: Int, r: Int, start: Int = 0, resultList: MutableList<Int>) {
 //
 //    if (r == resultList.size) {
-//        /*logic*/
+//        /* logic */
 //        val tempList = MutableList(r) {
 //            chickenShop[resultList[it]]
 //        }
