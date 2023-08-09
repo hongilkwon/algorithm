@@ -3,8 +3,8 @@ package bac.week3
 /*
     보물섬
 
-    1. 가장 긴 연결된 육지를 찾는다.(불필요한 단계이다)
-    2. 가징 긴 육지의 모든 위치에서 넓이 우선탐색을 한다.
+    가중치가 같은 그래프에서 최단거리를 계산한다 >> bfs
+    맵의 모든 시작점에서 bfs 탐색을 실시하면서 최단거리가 가장 긴것을 찾는다.
 
  */
 
@@ -17,7 +17,7 @@ package bac.week3
 //var cols = 0
 //
 //lateinit var map: Array<CharArray>
-//lateinit var sdArr: Array<IntArray>
+//lateinit var visited: Array<IntArray>
 //
 //val dy = arrayOf(-1, 0, 1, 0)
 //val dx = arrayOf(0, 1, 0, -1)
@@ -26,7 +26,7 @@ package bac.week3
 //
 //fun bfs(point: Pair<Int, Int>): Int {
 //
-//    sdArr[point.first][point.second] = 1
+//    visited[point.first][point.second] = 1
 //    q.add(point)
 //
 //    var maxLen = 0
@@ -40,12 +40,12 @@ package bac.week3
 //            val nx = p.second + dx[i]
 //
 //            if (ny !in 0 until rows || nx !in 0 until cols) continue
-//            if (sdArr[ny][nx] >= 1) continue
+//            if (visited[ny][nx] >= 1) continue
 //            if (map[ny][nx] == 'W') continue
 //
-//            sdArr[ny][nx] = sdArr[p.first][p.second] + 1
+//            visited[ny][nx] = visited[p.first][p.second] + 1
 //            q.add(ny to nx)
-//            maxLen = max(sdArr[ny][nx], maxLen)
+//            maxLen = max(visited[ny][nx], maxLen)
 //        }
 //    }
 //    return maxLen
@@ -60,24 +60,24 @@ package bac.week3
 //    cols = info[1]
 //
 //    map = Array(rows) { charArrayOf() }
-//    sdArr = Array(rows) { IntArray(cols) { 0 } }
+//    visited = Array(rows) { IntArray(cols) { 0 } }
 //
 //    for (i in 0 until rows) {
 //        map[i] = readLine().toCharArray()
 //    }
 //
-//    var sdMax = 0
+//    var maxLen = 0
 //    for (i in 0 until rows) {
 //        for (j in 0 until cols) {
 //            if (map[i][j] == 'L') {
-//                sdArr = Array(rows) { IntArray(cols) { 0 } }
+//                visited = Array(rows) { IntArray(cols) { 0 } }
 //                val len = bfs(i to j)
 ////                sdArr.forEach { println(it.joinToString(" ")) }
 ////                println()
-//                if (sdMax < len)
-//                    sdMax = len
+//                if (maxLen < len)
+//                    maxLen = len
 //            }
 //        }
 //    }
-//    println(sdMax-1)
+//    println(maxLen-1)
 //}

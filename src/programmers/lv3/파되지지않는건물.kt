@@ -20,74 +20,73 @@ package programmers.lv3
  */
 
 
-class Solution {
-
-    lateinit var board: Array<IntArray>
-    lateinit var skills: Array<IntArray>
-
-    val diff: Array<IntArray> = Array(1_001) { IntArray(1_001) { 0 } }
-    fun checkDiffPoint(skill: IntArray) {
-        val type = skill[0]
-
-        val sy = skill[1]
-        val sx = skill[2]
-
-        val ey = skill[3]
-        val ex = skill[4]
-
-        val degree = skill[5]
-
-        if (type == 1) {
-            diff[sy][sx] -= degree
-            diff[sy][ex + 1] += degree
-            diff[ey+1][sx] += degree
-            diff[ey + 1][ex + 1] -= degree
-        }
-        if (type == 2) {
-            diff[sy][sx] += degree
-            diff[sy][ex + 1] -= degree
-            diff[ey+1][sx] -= degree
-            diff[ey + 1][ex + 1] += degree
-        }
-    }
-
-    fun solution(b: Array<IntArray>, s: Array<IntArray>): Int {
-        var answer: Int = 0
-
-        board = b
-        skills = s
-
-        for (i in 0 until skills.size) {
-            checkDiffPoint(skills[i])
-        }
-
-
-        for (i in 0 until diff.size) {
-            var sum = 0
-            for (j in 0 until diff.first().size) {
-                sum += diff[i][j]
-                diff[i][j] = sum
-            }
-        }
-
-        for (j in 0 until diff.first().size) {
-            var sum = 0
-            for (i in 0 until diff.size) {
-                sum += diff[i][j]
-                diff[i][j] = sum
-            }
-        }
-
-        var cnt = 0
-        for (i in 0 until board.size) {
-            for (j in 0 until board.first().size) {
-                board[i][j] += diff[i][j]
-                if (board[i][j] > 0) {
-                    cnt += 1
-                }
-            }
-        }
-
-        return cnt
-    }
-}
+//class Solution {
+//
+//    lateinit var board: Array<IntArray>
+//    lateinit var skills: Array<IntArray>
+//
+//    val diff: Array<IntArray> = Array(1_001) { IntArray(1_001) { 0 } }
+//    fun checkDiffPoint(skill: IntArray) {
+//        val type = skill[0]
+//
+//        val sy = skill[1]
+//        val sx = skill[2]
+//
+//        val ey = skill[3]
+//        val ex = skill[4]
+//
+//        val degree = skill[5]
+//
+//        if (type == 1) {
+//            diff[sy][sx] -= degree
+//            diff[sy][ex + 1] += degree
+//            diff[ey+1][sx] += degree
+//            diff[ey + 1][ex + 1] -= degree
+//        }
+//        if (type == 2) {
+//            diff[sy][sx] += degree
+//            diff[sy][ex + 1] -= degree
+//            diff[ey+1][sx] -= degree
+//            diff[ey + 1][ex + 1] += degree
+//        }
+//    }
+//
+//    fun solution(b: Array<IntArray>, s: Array<IntArray>): Int {
+//        var answer: Int = 0
+//
+//        board = b
+//        skills = s
+//
+//        for (i in 0 until skills.size) {
+//            checkDiffPoint(skills[i])
+//        }
+//
+//
+//        for (i in 0 until diff.size) {
+//            var sum = 0
+//            for (j in 0 until diff.first().size) {
+//                sum += diff[i][j]
+//                diff[i][j] = sum
+//            }
+//        }
+//
+//        for (j in 0 until diff.first().size) {
+//            var sum = 0
+//            for (i in 0 until diff.size) {
+//                sum += diff[i][j]
+//                diff[i][j] = sum
+//            }
+//        }
+//
+//        var cnt = 0
+//        for (i in 0 until board.size) {
+//            for (j in 0 until board.first().size) {
+//                board[i][j] += diff[i][j]
+//                if (board[i][j] > 0) {
+//                    cnt += 1
+//                }
+//            }
+//        }
+//        return cnt
+//    }
+//}

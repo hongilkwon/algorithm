@@ -3,8 +3,13 @@ package bac.week3
 /*
     인구이동
 
-    전반적인 문제의 이해랑 로직은 맞았지만
-    dfs 구현함에 있어 구현력이 부족해서 틀렸다.
+    시뮬레이션 + dfs
+
+    문제의 이해랑 로직은 어렵지 않다.
+    dfs 구현에 있어 어떤 점을 지나가야되고(인구수 차이), 어떤 점을 지나갔는지 계산.
+
+    국경을 공유할때, --> 연결된 컴포넌트
+
  */
 
 
@@ -31,8 +36,11 @@ package bac.week3
 //        if (ny !in 0 until map.size || nx !in 0 until map.first().size) continue
 //        if (visited[ny][nx] == 1) continue
 //
+//        // 인구수 차이 계산
 //        val diff = abs(map[point.first][point.second] - map[ny][nx])
-//        if ( diff in l..r) {
+//
+//        // 연합이 되는 지점을 담고 다음 탐색.
+//        if (diff in l..r) {
 //            visited[ny][nx] = 1
 //            list.add(ny to nx)
 //            dfs(ny to nx, list)
@@ -61,8 +69,7 @@ package bac.week3
 //    var cnt = 0
 //
 //    while (true){
-//
-//        // 인구이동을 종료하는 Flag
+//        // 인구이동 종료 Flag
 //        var flag = false
 //        visited = Array(rows) { IntArray(cols) { 0 } }
 //        val list = mutableListOf<Pair<Int, Int>>()
@@ -89,6 +96,7 @@ package bac.week3
 //                }
 //            }
 //        }
+//
 //        if (!flag) break
 //        cnt += 1
 //    }
