@@ -1,8 +1,6 @@
 package programmers.lv2
 
 
-
-
 /*
     다리를 지나는 트럭.
 

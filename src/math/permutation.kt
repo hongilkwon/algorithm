@@ -14,6 +14,10 @@ package math
 //    'f', 'g', 'h', 'i', 'j',
 //    'k', 'l', 'm', 'n', 'o',
 //)
+
+//val permutationArr = arrayOf(
+//    'a', 'b', 'c',
+//)
 //var isSelect = BooleanArray(permutationArr.size) { false }
 //
 //// result는 항상 index 담아둔다.
@@ -32,16 +36,17 @@ package math
 //        return
 //    }
 //
+//    //반복문 시작이 0부터 시작하는것이 조합하고 가장큰 차이다.
 //    for (i in 0 until n) {
-//        // 시도하는 수가 선택되었는지 판단한다.
+//        // 중복 선택을 방지한다.
 //        if (isSelect[i]) continue
 //
 //        permutationResult.add(i)
 //        isSelect[i] = true
 //
-//        permutation(n = n, r = r, cnt + 1)
+//        permutation(n = n, r = n, cnt + 1)
 //
-//        permutationResult.remove(i)
+//        permutationResult.removeLast()
 //        isSelect[i] = false
 //    }
 //}
