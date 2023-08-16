@@ -8,7 +8,6 @@ package bac.week5
 
     소수 - 1과 자기 자신으로 만 나눠지는 수.
 
-
     1. n보다 작은 소수를 모두 구한다.
     2. 더해 보면서 카운팅을 한다.
 
@@ -35,25 +34,25 @@ package bac.week5
 //}
 //
 //
-//val primes = mutableListOf<Int>()
-//
-//fun eratos(n: Int, arr: Array<Int>) {
-//
-//    for (i in 2..n) {
-//        if (arr[i] == 0) continue
-//        var j = i * 2
-//        while (j <= n) {
-//            arr[j] = 0
-//            j += i
-//        }
-//    }
-//
-//    for (i in 2..n) {
-//        if (arr[i] != 0) {
-//            primes.add(arr[i])
-//        }
-//    }
-//}
+val primes = mutableListOf<Int>()
+
+fun eratos(n: Int, arr: Array<Int>) {
+
+    for (i in 2..n) {
+        if (arr[i] == 0) continue
+        var j = i * 2
+        while (j <= n) {
+            arr[j] = 0
+            j += i
+        }
+    }
+
+    for (i in 2..n) {
+        if (arr[i] != 0) {
+            primes.add(arr[i])
+        }
+    }
+}
 //
 //
 //fun main() = with(System.`in`.bufferedReader()) {

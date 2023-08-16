@@ -9,6 +9,7 @@ package math
     중복순열 n∏r = n^r
  */
 
+
 //val permutationArr = arrayOf(
 //    'a', 'b', 'c', 'd', 'e',
 //    'f', 'g', 'h', 'i', 'j',
@@ -16,18 +17,18 @@ package math
 //)
 
 //val permutationArr = arrayOf(
-//    'a', 'b', 'c',
+//    'a', 'b', 'c', 'd', 'e'
 //)
 //var isSelect = BooleanArray(permutationArr.size) { false }
 //
-//// result는 항상 index 담아둔다.
+//// result 항상 index 담아둔다.
 //val permutationResult = mutableListOf<Int>()
 //var permutationTotalCnt = 0
 //
-//fun permutation(n: Int, r: Int, cnt: Int = 0) {
+//fun permutation(n: Int, r: Int) {
 //
 //    // 카운트 숫자를 매개변수로 주어 뽑으려는 수까지 cnt를 세게되면 메서드 종료
-//    if (cnt == r) {
+//    if (permutationResult.size == r) {
 //        /*
 //            logic
 //         */
@@ -36,7 +37,8 @@ package math
 //        return
 //    }
 //
-//    //반복문 시작이 0부터 시작하는것이 조합하고 가장큰 차이다.
+//    //매번 재귀 마다 반복문 시작이 0부터 시작함.
+//
 //    for (i in 0 until n) {
 //        // 중복 선택을 방지한다.
 //        if (isSelect[i]) continue
@@ -44,13 +46,13 @@ package math
 //        permutationResult.add(i)
 //        isSelect[i] = true
 //
-//        permutation(n = n, r = n, cnt + 1)
+//        permutation(n = n, r = r)
 //
 //        permutationResult.removeLast()
 //        isSelect[i] = false
 //    }
 //}
 //fun main() {
-//    permutation(n= permutationArr.size, r= 3)
-//    println("doublePermutationTotalCnt: $permutationTotalCnt")
+//    permutation(n= permutationArr.size, r= 4)
+//    println("PermutationTotalCnt: $permutationTotalCnt")
 //}

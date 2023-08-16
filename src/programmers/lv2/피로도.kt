@@ -5,6 +5,7 @@ package programmers.lv2
     피로도
 
     순열, 완전 탐색.
+    dungeons의 세로(행) 길이(즉, 던전의 개수)는 1 이상 8 이하입니다.
  */
 
 
