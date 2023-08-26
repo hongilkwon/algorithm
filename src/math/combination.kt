@@ -13,6 +13,7 @@
 //
 //// 조합의 결과 뽑은 index를 담을 배열.
 //val resultList: MutableList<Int> = mutableListOf()
+//
 //fun combination(n: Int, r: Int, start: Int = 0) {
 //
 //    if (resultList.size == r) {

@@ -9,10 +9,9 @@ package bac.week3
       M(1 ≤ M ≤ 13) 골라야되는 치킨집,
 
       완전탐색 문제
-      모든 치킨집중에 m개 빼고 폐업시키고, 치킨 거리를 구한 값의 최소값을 구한다.
+      모든 치킨집중에 m개 빼고 폐업 시키고, 치킨 거리를 구한 값의 최소값을 구한다.
 
       * 특정한 의미를 가지는 좌표들은 따로 자료구조를 생성해서 담아본다.
-
 
  */
 
@@ -83,9 +82,11 @@ package bac.week3
 //
 //    if (r == resultList.size) {
 //        /* logic */
+//        // 임시로 m개의 치킨집 위치를 담음
 //        val tempList = MutableList(r) {
 //            chickenShop[resultList[it]]
 //        }
+//        // 도신의 치킨 거리를 구함.
 //        val cityLen = calCityLen(tempList)
 //        if (result > cityLen)
 //            result = cityLen

@@ -36,7 +36,6 @@ package bac.week2
 //    var child = 0
 //    for (next in adjList[idx]) {
 //        if (visited[next] == 1) continue
-//
 //        child += dfs(next)
 //    }
 //    // 자식이 하나도 없으면 자신이 리프노드다.
