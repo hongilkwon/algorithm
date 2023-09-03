@@ -6,7 +6,9 @@ val arr = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 lateinit var fwTree: Array<Int>
 
 fun initFwTree() {
+
     fwTree = Array(arr.size + 1) { 0 }
+
     for (i in 0 until arr.size) {
         fwUpdate(i, arr[i])
     }

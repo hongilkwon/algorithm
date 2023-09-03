@@ -2,6 +2,7 @@ package bac.week8.concept
 
 
 //val originSumArr = arrayOf(5, 8, 4, 3, 10, 2, 1, 6)
+//
 //lateinit var segmentTreeSum: Array<Int>
 //
 //fun sumTreeInit(size: Int) {

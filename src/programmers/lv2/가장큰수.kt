@@ -2,7 +2,7 @@ package programmers.lv2
 
 
 /*
-    가장큰수
+    가장 큰 수
 
     숫자 String 정렬문제.
 
