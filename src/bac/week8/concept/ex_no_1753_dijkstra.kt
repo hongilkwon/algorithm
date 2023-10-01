@@ -9,7 +9,7 @@ package bac.week8.concept
      다익스트라 최단거리 알고리즘.
      - "특정" 노드에서 다른 "모든"노드로 가는 최단경로를 계산한다.
      - 양의 가중치에서 사용한다.
-     - 매상황에서 가장 비용이 적은 노드를 선택한다(최적해)
+     - 매 상황에서 가장 비용이 적은 노드를 선택한다(최적해)
      - 그리디/dp 유형의 알고리즘이다.
 
     1. 출발 노드를 정한다.
@@ -33,7 +33,6 @@ package bac.week8.concept
 //
 //val adj = Array(20_001) { mutableListOf<Pair<Int, Int>>() }
 //val distance = Array(20_001) { INF }
-////val visited = Array(20_001) { false }
 //
 //val priorityQueue = PriorityQueue<Pair<Int, Int>>(compareBy { it.second })
 //
