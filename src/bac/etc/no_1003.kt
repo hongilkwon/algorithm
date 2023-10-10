@@ -6,7 +6,7 @@
 */
 
 
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val tc = readLine().toInt()
 //
@@ -19,15 +19,15 @@
 //    }
 //
 //    for (tc in 1..tc) {
-//        val bac.week5.concept.getN = readLine().toInt()
-//        if (bac.week5.concept.getN == 0) {
+//        val n = readLine().toInt()
+//        if (n == 0) {
 //            println("1 0")
 //            continue
 //        }
-//        if (bac.week5.concept.getN == 1) {
+//        if (n == 1) {
 //            println("0 1")
 //            continue
 //        }
-//        println("${arr[bac.week5.concept.getN - 2]} ${arr[bac.week5.concept.getN - 1]}")
+//        println("${arr[n - 2]} ${arr[n - 1]}")
 //    }
 //}
