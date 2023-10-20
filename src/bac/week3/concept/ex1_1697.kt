@@ -3,10 +3,10 @@ package bac.week3.concept
 
 
 /*
-숨박꼭질
+    숨박꼭질
 
-1. 수빈이 앞에 동생이 있는 경우
-2. 수빈이 뒤에 동생이 있는 경우
+    1. 수빈이 앞에 동생이 있는 경우
+    2. 수빈이 뒤에 동생이 있는 경우
  */
 
 //import java.util.LinkedList
@@ -42,7 +42,7 @@ package bac.week3.concept
 //}
 //
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
 //

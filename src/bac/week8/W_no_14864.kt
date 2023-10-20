@@ -12,8 +12,8 @@ package bac.week8
     즉, m=0 이라면
     1 2 3 4 5 순으로 번호를 가지고있다.
 
-    예시 이해가 쉽지않다.
-    문제를 관통하는 원리를 이해해야된다.
+    예시 이해가 쉽지 않다.
+    문제를 관통하는 원리를 이해 해야된다.
 
     (1,2), (1,5), (3,4), (3,5), (4,5)
     --> 3, 1, 5, 4, 2
@@ -22,7 +22,7 @@ package bac.week8
     --> 4 2 4 3 2
 
     "뒤에 서있으면서 더 작은 번호"
-    "빠짐없이"
+    "빠짐 없이"
     (x, y) ---> x+1 y-1
 */
 
@@ -33,6 +33,7 @@ package bac.week8
 //
 //lateinit var studentArr: IntArray
 //lateinit var visited: IntArray
+//
 //fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }

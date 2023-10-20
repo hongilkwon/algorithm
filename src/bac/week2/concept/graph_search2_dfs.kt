@@ -71,23 +71,35 @@ package bac.week2.concept
 //    adj[4].add(1)
 //    adj[5].add(3)
 //}
+//
 //fun main() {
 //    draw()
 //    dfs(adj, 1)
 //    println(visited.joinToString())
 //}
 
-// 맵(2차원 배열) 탐색 DFS
-// 맵의 특정 위치는 y(row) x(col)로 좌표로 나타낸다.
-// Pair<Int, Int> 또는 2개의 Int Type 파라미터를 필요로 한다.
-// 아래 코드는 맵을 탐색하면서 연결된 덩어리 지역을 방문을 표기한다.
+/*
+    맵(2차원 배열) 탐색 DFS
+    맵의 특정 위치는 y(row) x(col)로 좌표로 나타낸다.
+    Pair<Int, Int> 또는 2개의 Int Type 파라미터를 필요로 한다.
+    아래 코드는 맵을 탐색하면서 연결된 덩어리 지역을 방문을 표기한다.
+
+     nxn 의 정사각의 맵이 주어졌다면,
+
+     V = n*n개
+     E = n(n-1)개
+
+     시간 복잡도는
+     O(n^2+n(n-1))
+     --> O(n^2)
+ */
 
 //val map = arrayOf(
-//    arrayOf(1, 0, 1, 0, 1),
-//    arrayOf(1, 1, 0, 0, 1),
-//    arrayOf(0, 0, 0, 1, 1),
-//    arrayOf(0, 0, 0, 1, 1),
-//    arrayOf(0, 1, 0, 0, 0),
+//    intArrayOf(1, 0, 1, 0, 1),
+//    intArrayOf(1, 1, 0, 0, 1),
+//    intArrayOf(0, 0, 0, 1, 1),
+//    intArrayOf(0, 0, 0, 1, 1),
+//    intArrayOf(0, 1, 0, 0, 0),
 //)
 //
 //val dy = arrayOf(-1, 0, 1, 0)
@@ -97,7 +109,7 @@ package bac.week2.concept
 //val cols = 5
 //val visited = Array(rows) { IntArray(cols) { 0 } }
 //
-//fun mDfs(map: Array<Array<Int>>, p: Pair<Int, Int>) {
+//fun mDfs(map: Array<IntArray>, p: Pair<Int, Int>) {
 //    if (visited[p.first][p.second] == 1) return
 //    visited[p.first][p.second] = 1
 //
@@ -105,23 +117,26 @@ package bac.week2.concept
 //        val ny = p.first + dy[i]
 //        val nx = p.second + dx[i]
 //
-//        if (ny !in 0..map.size || nx !in 0..map.first().size) continue
-//        if(map[ny][nx] == 1 && visited[ny][nx] != 1){
-//            mDfs(map,ny to nx)
+//        if (ny !in 0 until map.size || nx !in 0 until map.first().size) continue
+//        if (map[ny][nx] == 1 && visited[ny][nx] != 1) {
+//            mDfs(map, ny to nx)
 //        }
 //    }
 //}
 //
 //fun main() {
-//    var result = 0
-//    for (i in 0 until  rows){
-//        for (j in 0 until cols){
-//            if (map[i][j]==1 && visited[i][j]!=1){
-//                result += 1
+//
+//    var connectedComponentCnt = 0
+//
+//    for (i in 0 until rows) {
+//        for (j in 0 until cols) {
+//            if (map[i][j] == 1 && visited[i][j] != 1) {
+//                connectedComponentCnt += 1
 //                mDfs(map, i to j)
 //            }
 //        }
 //    }
+//
 //    visited.forEach { println(it.joinToString()) }
-//    println(result)
+//    println(connectedComponentCnt)
 //}

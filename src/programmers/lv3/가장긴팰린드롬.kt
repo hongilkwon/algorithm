@@ -1,13 +1,12 @@
 package programmers.lv3
 
 /*
-    가장 긴 팰린드롬
+    가장 긴 팰린드롭
 
     팰린드롬
     dp(타뷸레이션으로 해결)
+
     nC2 * 2500
-
-
  */
 
 //class Solution {

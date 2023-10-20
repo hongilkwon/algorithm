@@ -3,7 +3,7 @@ package bac.week3
 /*
     숨바꼭질4
 
-    + 어떤 순서로 이동해야되는가.
+    + 어떤 순서로 이동해야 되는가.
 
     val path = MutableList<MutableList<Int>>()
 

@@ -2,11 +2,11 @@ package bac.week3.concept
 
 
 /*
-컴백홈
+    컴백홈
 
-dfs + 백트레킹 문제
-집으로 가는 거리를 구해야 되는 문제라 넓이우선 탐색을 사용해야되는가 헷갈릴수 있다.
-하지만 탐색의 경우를 직접생각을 해보면 level 단위의 탐색을 하면 안된다고 판단해야된다.
+    dfs + 백트레킹 문제
+    집으로 가는 거리를 구해야 되는 문제라 너비우선 탐색을 사용해야되는가 헷갈릴 수 있다.
+    하지만 탐색의 경우를 직접생각을 해보면 level 단위의 탐색을 하면 안된다고 판단해야 된다.
 
  */
 
@@ -45,7 +45,7 @@ dfs + 백트레킹 문제
 //    return result
 //}
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()){
+//fun main() = with(System.`in`.bufferedReader()){
 //
 //    val info  = readLine().split(" ").map { it.toInt() }
 //

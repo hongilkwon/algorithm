@@ -5,7 +5,7 @@ import java.util.Queue
 
 /*
    3. BFS 너비우선 탐색
-   - 특정 노드에서 시작해 이웃한 노드들을 먼저 탐색하는 알고리즘
+   - 특정 노드에서 시작해 이웃한 모든 노드를 먼저 탐색하는 알고리즘
    - 같은 가중치를 가진 그래프에서 최단거리 알고리즘으로도 사용된다.
    - 시간복잡도는 DFS와 같으며 주어진 맵전체를 탐색하며 한번 방문한 노드는 다시 한번 방문하지 않는다.
    - 때문에 만약 인접리스트로 이루어진 그래프 시간 복잡도는 O(V + E)이고 인접행렬의 경우 O(V^2)된다.
@@ -33,16 +33,16 @@ import java.util.Queue
 
  */
 
-//그래프 탐색 BFS
-//import java.util.*
+////그래프 탐색 BFS
 //
-//val arrSD = IntArray(6) { 0 }
+//val dist = IntArray(6) { 0 }
 //val visited = BooleanArray(6) { false }
 //
 //val queue: Queue<Int> = LinkedList()
 //
 //fun bfs(g: List<List<Int>>, u: Int) {
-//    arrSD[u] = 1
+//
+//    dist[u] = 1
 //    visited[u] = true
 //    queue.add(u)
 //
@@ -53,7 +53,7 @@ import java.util.Queue
 //        for (u in g[v]) {
 //            if (!visited[u]) {
 //                visited[u] = true
-//                arrSD[u] = arrSD[v]+1
+//                dist[u] = dist[v]+1
 //                queue.add(u)
 //            }
 //        }
@@ -72,14 +72,16 @@ import java.util.Queue
 //
 //    bfs(adjList, 5)
 //    println(visited.joinToString())
-//    println(arrSD.joinToString())
+//    println(dist.joinToString())
 //}
 
+///*
 // map 탐색 BFS
 // 맵의 특정 위치는 y(row) x(col)로 좌표로 나타낸다.
 // Pair<Int, Int> 또는 2개의 Int Type 파라미터를 필요로 한다.
 // 아래 코드는 맵을 탐색하면서 연결된 덩어리 지역을 방문을 표기한다.
-
+//*/
+//
 //val map = arrayOf (
 //    arrayOf(1,0,1,1,1,1),
 //    arrayOf(1,0,1,0,1,0),
@@ -92,13 +94,13 @@ import java.util.Queue
 //
 //val rows = 4
 //val cols = 6
-//val sdArr = Array(rows) { IntArray(cols) { 0 } }
+//val dist = Array(rows) { IntArray(cols) { 0 } }
 //
 //val q: Queue<Pair<Int, Int>> = LinkedList()
 //
 //fun mBfs(p: Pair<Int, Int>) {
 //
-//    sdArr[p.first][p.second] = 1
+//    dist[p.first][p.second] = 1
 //    q.add(p)
 //
 //    while (q.isNotEmpty()) {
@@ -113,18 +115,18 @@ import java.util.Queue
 //            // 맵을 벗어나면 안됨
 //            if (ny !in 0 until map.size || nx !in 0 until map.first().size) continue
 //            // 재방문은 허용되지 않음
-//            if (sdArr[ny][nx] != 0) continue
+//            if (dist[ny][nx] != 0) continue
 //            // 길이 아니면 안됨
 //            if (map[ny][nx] == 0) continue
-//            sdArr[ny][nx] = sdArr[p.first][p.second] + 1
+//            dist[ny][nx] = dist[p.first][p.second] + 1
 //            q.add(ny to nx)
 //        }
 //    }
 //}
 //
-//fun bac.week5.concept.main() {
+//fun main() {
 //    mBfs(0 to 0)
-//    sdArr.forEach {
+//    dist.forEach {
 //       println(it.joinToString())
 //    }
 //}

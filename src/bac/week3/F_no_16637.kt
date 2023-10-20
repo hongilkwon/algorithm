@@ -8,10 +8,10 @@ package bac.week3
 
     N(1 ≤ N ≤ 19)
 
-    문제를 보고 감조자 잡기 힘들었음.
+    문제를 보고 감을 잡기 힘듬.
 
 
-    1. 괄호를 지정할곳을 고르는 규칙을 이해한다.
+    1. 괄호를 지정할 곳을 고르는 규칙을 이해한다.
      -> (a x b) x c, a x (b x c)
 
     2. 누적된 계산을 하여 진행한다.
@@ -57,9 +57,9 @@ package bac.week3
 //}
 //
 //
-//fun bac.week5.concept.main() =  with(System.`in`.bufferedReader()){
+//fun main() =  with(System.`in`.bufferedReader()){
 //
-//    val bac.week5.concept.getN = readLine().toInt()
+//    val n = readLine().toInt()
 //    val express = readLine().toString()
 //
 //    for (c in express){

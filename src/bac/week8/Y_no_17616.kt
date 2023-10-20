@@ -10,8 +10,7 @@ package bac.week8
 
     (2 ≤ N ≤ 105, 1 ≤ M ≤ min(N(N-1)/2, 5×105), 1 ≤ X ≤ N
 
-    앞에 몇놈있는지 뒤에 몇놈 있는지 확인한다.
-
+    앞에 몇 놈 있는지 뒤에 몇놈 있는지 확인 한다.
     간단한 dfs/bfs 탐색한 노드 개수세기로 가능하다.
 
 */
@@ -24,6 +23,7 @@ package bac.week8
 //lateinit var adjListRev: Array<MutableList<Int>>
 //
 //lateinit var visited: IntArray
+//
 //fun dfs(idx: Int, adj: Array<MutableList<Int>>): Int {
 //
 //    visited[idx] = 1
@@ -33,7 +33,6 @@ package bac.week8
 //        if (visited[next] == 1) continue
 //        cnt += dfs(next, adj)
 //    }
-//
 //    return cnt
 //}
 //
