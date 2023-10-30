@@ -1,7 +1,5 @@
 package programmers.lv2
 
-import kotlin.math.min
-
 
 /*
     광물캐기
@@ -29,6 +27,8 @@ import kotlin.math.min
    3. *greedy
 
  */
+
+import kotlin.math.min
 
 //var answer = Int.MAX_VALUE
 //lateinit var picks: IntArray

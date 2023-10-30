@@ -1,11 +1,15 @@
-
 fun main() {
 
-    var cnt = 0
-    var temp = 32
-    while (temp > 1) {
-        temp /= 2
-        cnt += 1
-    }
-    println(cnt)
+
+    val set = mutableSetOf(
+        mutableListOf(1, 2, 3),
+        mutableListOf(1, 2, 4)
+    )
+
+    println(set)
+    set.add(mutableListOf(1, 4, 2))
+
+    println(set)
 }
+
+

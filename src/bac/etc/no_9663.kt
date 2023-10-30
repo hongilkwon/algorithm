@@ -1,5 +1,9 @@
 package bac.etc
 
+/*
+    n - queen
+
+ */
 
 //var n = 0
 //

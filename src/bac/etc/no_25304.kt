@@ -1,7 +1,7 @@
 
 /*
 
- 영수증
+    영수증
 
 */
 fun main() = with(System.`in`.bufferedReader()) {

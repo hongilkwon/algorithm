@@ -2,13 +2,11 @@
 //   오아시스 재결합.
 //
 //
-//    1< bac.week5.concept.getN <50만
+//    1< n <50만
 //
-//    50만*50만
+//    50만 * 50만
 //    1초?
-//    O(bac.week5.concept.getN^2) 풀수가 없다.
-//
-//
+//    O(n^2) 풀수가 없다.
 //
 //    stack --> 쌍을 맞춤.
 //    * 단순 일반 구현으로는 풀수가 없음
@@ -17,21 +15,20 @@
 //
 //    현재까지 값 + 새로운 사람이 뒤에 섰을떄 새로 생길수있는 추가적 수
 //
-//
 // */
 //
 //import java.util.Stack
 //
-//var bac.week5.concept.getN = 0
+//var n = 0
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
-//    bac.week5.concept.getN = readLine().toInt()
+//    n = readLine().toInt()
 //
 //    val stack = Stack<Pair<Long, Long>>()
 //    var total: Long = 0
 //
-//    for (i in 0 until bac.week5.concept.getN) {
+//    for (i in 0 n) {
 //        val num = readLine().toLong()
 //
 //        // 앞사람 보다 크거나 같은 사람.
