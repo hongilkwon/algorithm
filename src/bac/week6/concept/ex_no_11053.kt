@@ -14,37 +14,32 @@ package bac.week6.concept
 
    */
 
+import kotlin.math.max
 
-//import kotlin.math.max
-//
 //var n = 0
-//var arr = Array(1001) { 0 }
-//var cnt = Array(1001) { 0 }
+//lateinit var arr: IntArray
+//lateinit var LISLengthArr: IntArray
 //
 //fun main() = with(System.`in`.bufferedReader()) {
 //
 //    n = readLine().toInt()
-//    val info = readLine().split(" ").map { it.toInt() }.toTypedArray()
+//    arr = readLine().split(" ").map { it.toInt() }.toIntArray()
+//    LISLengthArr = IntArray(n) { 0 }
 //
-//    for (i in 0 until info.size) {
-//        arr[i] = info[i]
-//    }
-////    println(arr.joinToString(" "))
-//
-//    var answer = 0
 //    for (i in 0 until n) {
-//        var maxValue = 0
+//        var tempMaxLength = 0
 //        for (j in 0 until i) {
-//            // 현재 숫자 보다 작아야 된다.
-//            // 지금까지 찾은 최대값 보다는 커야된다.
-//            if (arr[i] > arr[j] && maxValue < cnt[j]) {
-//                maxValue = cnt[j]
+//            // (arr[i] > arr[j]) 오름 차순 증가 이기 때문에 현재 숫자 보다 작아야 된며,
+//            // LIS 길이 값은 가장 크다면 갱신.
+//            if (arr[i] > arr[j] && tempMaxLength < LISLengthArr[j]) {
+//                tempMaxLength = LISLengthArr[j]
 //            }
 //        }
-//        cnt[i] = maxValue + 1
-//        answer = max(answer, maxValue)
+//        // 위에서 선택된 arr[j]을 포함 하는 LISLengthArr[i] 값을 갱신.
+//        LISLengthArr[i] = tempMaxLength + 1
 //    }
-//    println(answer + 1)
+////    println(LISLengthArr.joinToString(" "))
+//    println(LISLengthArr.maxOrNull())
 //    Unit
 //}
 
