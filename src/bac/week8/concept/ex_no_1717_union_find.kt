@@ -21,6 +21,7 @@ package bac.week8.concept
 //var m = 0
 //
 //lateinit var arr: IntArray
+//
 //fun getParent(n: Int): Int =
 //    if (arr[n] == n)
 //        n
