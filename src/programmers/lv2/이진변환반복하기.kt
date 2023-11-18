@@ -26,7 +26,6 @@ package programmers.lv2
 //                else
 //                    temp += str[i]
 //            }
-//
 //            str = Integer.toBinaryString(temp.length)
 //        }
 //
