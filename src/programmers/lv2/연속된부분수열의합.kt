@@ -23,28 +23,64 @@ package programmers.lv2
 
  */
 
-//fun solution(sequence: IntArray, k: Int): IntArray {
-//    var answer: IntArray = intArrayOf()
+//class Solution {
+//    fun solution(sequence: IntArray, k: Int): IntArray {
+//        var answer: IntArray = intArrayOf()
 //
-//    val sequenceList = mutableListOf<Pair<Int, Int>>()
+//        val sequenceList = mutableListOf<Pair<Int, Int>>()
 //
-//    var left = 0
-//    var sum = 0
+//        var left = 0
+//        var sum = 0
 //
-//    for (right in 0 until sequence.size){
-//        sum += sequence[right]
-//        while(sum > k) {
-//            sum -= sequence[left]
-//            left++
+//        for (right in 0 until sequence.size) {
+//            sum += sequence[right]
+//            while (sum > k) {
+//                sum -= sequence[left]
+//                left++
+//            }
+//            if (sum == k) {
+//                sequenceList.add(left to right)
+//            }
 //        }
-//        if(sum == k) {
-//            sequenceList.add(left to right)
-//        }
+//
+//        val comp = compareBy<Pair<Int, Int>> { it.second - it.first }.thenBy { it.first }
+//        sequenceList.sortWith(comp)
+//
+//        answer = intArrayOf(sequenceList.first().first, sequenceList.first().second)
+//        return answer
 //    }
+//}
+
+//class Solution {
+//    fun solution(sequence: IntArray, k: Int): IntArray {
+//        var answer: IntArray = intArrayOf()
 //
-//    val comp = compareBy<Pair<Int, Int>> {it.second - it.first}.thenBy { it.first }
-//    sequenceList.sortWith(comp)
+//        val rangeList = mutableListOf<Pair<Int, Int>>()
 //
-//    answer = intArrayOf(sequenceList.first().first, sequenceList.first().second)
-//    return answer
+//        var p2 = 0
+//        var interSum = 0
+//        for (p1 in 0 until sequence.size) {
+//            while (k > interSum && p2 < sequence.size) {
+//                interSum += sequence[p2]
+//                p2 += 1
+//            }
+//            // 구간의 합이 k보다 작거나 같다.
+//            if (interSum == k) {
+//                rangeList.add(p1 to p2 - 1)
+//            }
+//            // p1이 움직일 차례니까 기존의 p1은 빼주어야됨.
+//            interSum -= sequence[p1]
+//        }
+//
+//        val comp = compareBy<Pair<Int, Int>> { it.second - it.first }.thenBy { it.first }
+//        rangeList.sortWith(comp)
+//
+//        answer = intArrayOf(rangeList.first().first, rangeList.first().second)
+//        return answer
+//    }
+//}
+//
+//fun main() {
+//    val result = Solution().solution(intArrayOf(1, 1, 1, 2, 3, 4, 5), 5)
+//    println(result.joinToString(" "))
 //}

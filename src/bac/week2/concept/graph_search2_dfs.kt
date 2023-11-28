@@ -87,10 +87,10 @@ package bac.week2.concept
      nxn 의 정사각의 맵이 주어졌다면,
 
      V = n*n개
-     E = n(n-1)개
+     E = (n-1)(n+2)개
 
      시간 복잡도는
-     O(n^2+n(n-1))
+     O(n^2+n^2+n-2)
      --> O(n^2)
  */
 

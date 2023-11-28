@@ -24,7 +24,7 @@ package math
 //
 ///*
 // *  곱의 절반인 sqrt(n.toDouble()).toInt()까지만 반복.
-// *  시간 복잡도 O(logN)
+// *  시간 복잡도 O(n/2)
 // */
 //fun isPrimeV2(n: Int): Boolean {
 //    if (n == 1) return false
@@ -57,7 +57,7 @@ package math
 //    arr[0] = 1
 //    arr[1] = 0
 //
-//    // 2 .. n 까지 반복
+//     2 .. n 까지 반복
 //    for (i in 2..n) {
 //        // 이미 0이면 건너뜀.
 //        if (arr[i] == 0) continue

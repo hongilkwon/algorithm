@@ -19,41 +19,36 @@ package bac.etc
     BigDecimal로도 하는 법 알아두기.
  */
 
-import java.math.BigDecimal
-import java.math.RoundingMode
-import kotlin.math.abs
-
-var n = 0
-
-lateinit var arr: Array<IntArray>
-
-fun main() = with(System.`in`.bufferedReader()) {
-
-    n = readLine().toInt()
-
-    arr = Array(2) { IntArray(n + 1) }
-
-    for (i in 0 until n) {
-        val p = readLine().split(" ").map { it.toInt() }
-        arr[0][i] = p[0]
-        arr[1][i] = p[1]
-    }
-
-    arr[0][n] = arr[0][0]
-    arr[1][n] = arr[1][0]
-
-    var a = 0L
-    var b = 0L
-    for (i in 0 until arr[0].size - 1) {
-        a += arr[0][i].toLong() * arr[1][i + 1].toLong()
-        b += arr[1][i].toLong() * arr[0][i + 1].toLong()
-    }
-
-    val answer = abs(a - b).toDouble()/2
-    println(BigDecimal(answer).setScale(1, RoundingMode.HALF_UP))
-
-}
-
-
-
-
+//import java.math.BigDecimal
+//import java.math.RoundingMode
+//import kotlin.math.abs
+//
+//var n = 0
+//
+//lateinit var arr: Array<IntArray>
+//
+//fun main() = with(System.`in`.bufferedReader()) {
+//
+//    n = readLine().toInt()
+//
+//    arr = Array(2) { IntArray(n + 1) }
+//
+//    for (i in 0 until n) {
+//        val p = readLine().split(" ").map { it.toInt() }
+//        arr[0][i] = p[0]
+//        arr[1][i] = p[1]
+//    }
+//
+//    arr[0][n] = arr[0][0]
+//    arr[1][n] = arr[1][0]
+//
+//    var a = 0L
+//    var b = 0L
+//    for (i in 0 until arr[0].size - 1) {
+//        a += arr[0][i].toLong() * arr[1][i + 1].toLong()
+//        b += arr[1][i].toLong() * arr[0][i + 1].toLong()
+//    }
+//
+//    val answer = abs(a - b).toDouble()/2
+//    println(BigDecimal(answer).setScale(1, RoundingMode.HALF_UP))
+//}

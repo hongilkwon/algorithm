@@ -23,6 +23,7 @@ package programmers.lv2
     * 대각선의 특성을 이용하여.
     * HashSet을 이용하여 Queen을 놓을수 있는지 확인한다.
     3. n ^ n
+
  */
 
 //class Solution {

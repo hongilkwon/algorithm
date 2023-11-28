@@ -7,7 +7,7 @@
 
  도식화 -> 회의 종료 시간으로 정렬.
 
- 이후 최적해(그리디)로 조짐.
+ 최적해(그리디)로 조짐.
  주어진 시간들을 종료시간으로 정렬한 뒤, 훑으면서 현재까지 진행한 회의 시각 <= 다음 회의의 시작 시간 이면 update 및 count 를 올려주는 것
 
  종료시간으로 정렬할때, 같다면 시작시간이 빠른순으로 정렬?
@@ -19,24 +19,24 @@
  */
 
 
-//var bac.week5.concept.getN = 0
+//var n = 0
 //var answer = 1
 //
-//fun bac.week5.concept.main() = with(System.`in`.bufferedReader()) {
+//fun main() = with(System.`in`.bufferedReader()) {
 //
-//    bac.week5.concept.getN = readLine().toInt()
+//    n = readLine().toInt()
 //
-//    val arr = Array(bac.week5.concept.getN) {
+//    val arr = Array(n) {
 //        val info = readLine().split(" ").map { it.toInt() }
 //        info[0] to info[1]
 //    }
 //
-//    val times = arr.sortedWith(comparator = compareBy({it.second}, {it.first}))
+//    val times = arr.sortedWith(compareBy<Pair<Int, Int>> { it.second }.thenBy { it.first })
 ////    println(times.joinToString(" "))
 //    var start = times[0].first
 //    var end = times[0].second
 //
-//    for (i in 1 until bac.week5.concept.getN){
+//    for (i in 1 until n){
 //        if (times[i].first < end) continue
 //        start = times[i].first
 //        end = times[i].second

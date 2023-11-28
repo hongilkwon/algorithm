@@ -47,6 +47,8 @@ package bac.week2
 //            if (str[i] == '.')
 //                break
 //        }
+//        // 스택이 비어 있으면 모든 짝이 맞았기 때문이고,
+//        // 스택이 비어 있지 않다면, 왼쪽이던 오른쪽이던 스택에 짝이 맞지 않는 상태로 남아 있다.
 //        if (stack.isEmpty()) {
 //            println("yes")
 //        } else {
