@@ -49,7 +49,8 @@ package bac.week6.concept
 //
 //    while (left < right) {
 //        val mid = (left + right) / 2
-//
+//        // arr[mid]가 key 보다 "큰 값"이면,
+//        // 그것을 다음 상한선 right
 //        if (arr[mid] > key) {
 //            right = mid
 //        } else {
@@ -60,8 +61,8 @@ package bac.week6.concept
 //}
 //
 //fun main() {
-//    val arr = arrayOf(1, 2, 2, 3, 3, 3, 4, 5, 5, 5, 5, 5)
-//
-//    println(lowerBound(arr, key= 4))
-//    println(upperBound(arr, key= 2))
+//    val arr = arrayOf(1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 7)
+//    println(lowerBound(arr, key = 3))
+//    println(lowerBound(arr, key = 0))
+//    println(lowerBound(arr, key = 8))
 //}

@@ -14,7 +14,6 @@ package sorting
  */
 
 //val arr = intArrayOf(10, 1, 5, 3, 2, 4, 7, 9, 8, 6)
-//
 //fun swap(a: Int, b: Int) {
 //    val temp = arr[a]
 //    arr[a] = arr[b]
@@ -48,7 +47,7 @@ package sorting
 //    quickSort(start, r - 1)
 //    quickSort(r + 1, end)
 //}
-//
+
 //fun main() {
 //
 //    quickSort(0, arr.lastIndex)

@@ -37,8 +37,8 @@ package bac.week6.concept
 //
 //fun check(totalTime: Long): Boolean {
 //    /*
-//     모든 인원을 심사하는데 걸리는 시간을 각 심사대에서 걸리는 시간으로 나눠서
-//     몇 명을 심사 할 수 있는지 카운트
+//      모든 인원을 심사하는데 걸리는 시간을 각 심사대에서 걸리는 시간으로 나눠서
+//      몇 명을 심사 할 수 있는지 카운트
 //     */
 //    var cnt = 0L
 //    for (i in 0 until timeArr.size) {
