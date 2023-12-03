@@ -5,14 +5,15 @@ package bac.week6
 
    1 ≤ N, M ≤ 20,000
 
-   20,000 * 20,000
-   400,000,000
-   4억
+   20_000 * 20_000
+   400_000_000
+   4억   -> 단순 2중반복 안됨.
 
-   kotlin
-   2분탐색을 이용한 lower_bound , upper_bound 구현
+   lower_bound
+   A는 자기보다 크기가 작은 먹이만 먹을 수 있다
+   A의 크기가 B보다 큰 쌍이 몇 개나 있는지
 
-   */
+  */
 
 //var n = 0
 //var m = 0
@@ -20,22 +21,21 @@ package bac.week6
 //lateinit var arrA: Array<Int>
 //lateinit var arrB: Array<Int>
 //
-//fun lowerBound(arr: Array<Int>, k: Int): Int {
-//    var start = 0
-//    var end = arr.lastIndex
+//fun lowerBound(key: Int): Int {
 //
-//    if (arr.last() < k) return arr.size
-//    if (arr.first() > k) return -1
+//    var left = 0
+//    var right = arrB.size
 //
-//    while (start < end) {
-//        val mid = (start + end) / 2
-//        if (arr[mid] < k) {
-//            start = mid + 1
+//    while (left < right) {
+//        val mid = (left + right) / 2
+//
+//        if (arrB[mid] >= key) {
+//            right = mid
 //        } else {
-//            end = mid
+//            left = mid + 1
 //        }
 //    }
-//    return start
+//    return right
 //}
 //
 //fun main() = with(System.`in`.bufferedReader()) {
@@ -47,16 +47,13 @@ package bac.week6
 //        m = info[1]
 //
 //        arrA = readLine().split(" ").map { it.toInt() }.toTypedArray()
-//        arrA.sort()
-//
 //        arrB = readLine().split(" ").map { it.toInt() }.toTypedArray()
 //        arrB.sort()
 //
 //        var cnt = 0
 //        for (i in 0 until arrA.size) {
-//            val idx = lowerBound(arrB, arrA[i])
-//            if (idx > 0)
-//                cnt += idx
+//            val idx = lowerBound(arrA[i])
+//            cnt += idx
 //        }
 //        println(cnt)
 //    }

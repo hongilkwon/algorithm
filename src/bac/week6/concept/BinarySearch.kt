@@ -43,9 +43,9 @@ package bac.week6.concept
 //    key 보다 "큰 값"이 가장 처음 나오는 index
 // */
 //
-//fun upperBound(arr: Array<Int>, start: Int = 0, end: Int = arr.size, key: Int): Int {
-//    var left = start
-//    var right = end
+//fun upperBound(arr: Array<Int>, key: Int): Int {
+//    var left = 0
+//    var right = arr.size
 //
 //    while (left < right) {
 //        val mid = (left + right) / 2
@@ -59,10 +59,8 @@ package bac.week6.concept
 //    }
 //    return right
 //}
-//
+
 //fun main() {
-//    val arr = arrayOf(1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 7)
-//    println(lowerBound(arr, key = 3))
-//    println(lowerBound(arr, key = 0))
-//    println(lowerBound(arr, key = 8))
+//    val arr = arrayOf(1, 3, 6)
+//    println(lowerBound(arr, key = -1))
 //}
