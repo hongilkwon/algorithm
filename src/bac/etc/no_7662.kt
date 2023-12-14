@@ -13,8 +13,6 @@ package bac.etc
     우선순위 큐 2개를 이용한다.
     * 우선순위큐는 특정한 우선순위를 정해주지 않으면,
     숫자는 오름차순이다. 스트링은 사전순이다.
-
-
  */
 
 //import java.util.PriorityQueue

@@ -1,7 +1,5 @@
 package bac.etc
 
-import java.lang.StringBuilder
-
 /*
     트리 순회
 
@@ -9,6 +7,8 @@ import java.lang.StringBuilder
     노드의 개수 N(1 ≤ N ≤ 26)
 
  */
+
+import java.lang.StringBuilder
 
 //var n = 0
 //

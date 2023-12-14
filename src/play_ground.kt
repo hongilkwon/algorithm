@@ -1,26 +1,15 @@
+import kotlin.math.pow
+
 lateinit var arr: IntArray
 
+/*
+    play_ground
+ */
 
 fun main() {
 
-    arr = intArrayOf(1, 4, 7, 9, 11, 13, 16, 17, 21, 22, 25, 28)
+    println(2.0.pow(10).toInt())
 
-    val key = 22
-    var left = 0
-    var right = arr.lastIndex
-
-    while (left <= right) {
-        val mid = (left + right) / 2
-
-        if (arr[mid] == key) {
-            println(mid)
-            break
-        } else if (arr[mid] > key) {
-            right = mid - 1
-        } else {
-            left = mid + 1
-        }
-    }
 }
 
 

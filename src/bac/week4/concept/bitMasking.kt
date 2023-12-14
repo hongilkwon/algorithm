@@ -158,8 +158,6 @@ package bac.week4.concept
 //    n = n xor (1 shl idx)
 //    return n
 //}
-
-
 //fun isOn(n: Int) {
 //
 //    for (i in 1..7) {

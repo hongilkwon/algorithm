@@ -1,13 +1,9 @@
 package bac.etc
 
-
 /*
-    수 나누기 게임
-
+    DSLR
  */
 
-
 fun main() = with(System.`in`.bufferedReader()){
-
 
 }

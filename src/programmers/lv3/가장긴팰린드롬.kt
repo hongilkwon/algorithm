@@ -7,6 +7,7 @@ package programmers.lv3
     dp(타뷸레이션으로 해결)
 
     nC2 * 2500
+
  */
 
 //class Solution {
