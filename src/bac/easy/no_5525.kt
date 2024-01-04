@@ -1,7 +1,9 @@
 package bac.easy
 
 /*
-    IOIOI
+    IOIOI (좋은문제)
+
+    분야: String
 
     * 문자열 매칭에 좋은 문제
 

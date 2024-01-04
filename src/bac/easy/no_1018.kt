@@ -1,7 +1,5 @@
 package bac.easy
 
-import kotlin.math.min
-
 /*
     체스판 다시 칠하기.
 
@@ -12,6 +10,9 @@ import kotlin.math.min
 
     완전 탐색 후 최소값을 갱신한다.
  */
+
+
+import kotlin.math.min
 
 //var n = 0
 //var m = 0
