@@ -19,7 +19,7 @@ package math
 //        } else {
 //            num2 to num1
 //        }
-//
+//// 나머지가 0이 아니면, 즉 나누어 떨어질 때까지 반복,
 //    while (b != 0) {
 //        val r = a % b
 //        a = b

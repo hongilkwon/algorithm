@@ -2,6 +2,11 @@
  * kotlin type
  */
 
+//fun main()= with(System.`in`.bufferedReader()){
+//
+//    return@with Unit
+//}
+
 // Number
 // 서로 다른 숫자타입을 연산할 경우 범위가 큰타입으로 자동으로 형변환이 일어난다.
 // 가능하면 동일한 타입끼리 연산을 한다. 서로 다른 특히, 정수 - 실수 연산을 하면 안된다.
