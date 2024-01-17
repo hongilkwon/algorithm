@@ -17,42 +17,42 @@ package bac.easy
 
  */
 
-import kotlin.math.min
-
-fun calDiff(a: String, b: String): Int {
-    var dist = 0
-    for (i in 0 until 4) {
-        if (a[i] != b[i]) dist += 1
-    }
-    return dist
-}
-
-fun main() = with(System.`in`.bufferedReader()) {
-
-    val tc = readLine().toInt()
-    for (t in 0 until tc) {
-
-        val n = readLine().toInt()
-        val mbtiList = readLine().split(" ")
-        if (n > 33) {
-            println(0)
-            continue
-        } else {
-            var minDist = 15
-            for (i in 0 until mbtiList.size) {
-                for (j in i + 1 until mbtiList.size) {
-                    for (k in j + 1 until mbtiList.size) {
-                        minDist = min(
-                            minDist,
-                            calDiff(mbtiList[i], mbtiList[j]) +
-                                    calDiff(mbtiList[j], mbtiList[k]) +
-                                    calDiff(mbtiList[k], mbtiList[i])
-                        )
-                    }
-                }
-            }
-            println(minDist)
-        }
-    }
-    return@with Unit
-}
+//import kotlin.math.min
+//
+//fun calDiff(a: String, b: String): Int {
+//    var dist = 0
+//    for (i in 0 until 4) {
+//        if (a[i] != b[i]) dist += 1
+//    }
+//    return dist
+//}
+//
+//fun main() = with(System.`in`.bufferedReader()) {
+//
+//    val tc = readLine().toInt()
+//    for (t in 0 until tc) {
+//
+//        val n = readLine().toInt()
+//        val mbtiList = readLine().split(" ")
+//        if (n > 33) {
+//            println(0)
+//            continue
+//        } else {
+//            var minDist = 15
+//            for (i in 0 until mbtiList.size) {
+//                for (j in i + 1 until mbtiList.size) {
+//                    for (k in j + 1 until mbtiList.size) {
+//                        minDist = min(
+//                            minDist,
+//                            calDiff(mbtiList[i], mbtiList[j]) +
+//                                    calDiff(mbtiList[j], mbtiList[k]) +
+//                                    calDiff(mbtiList[k], mbtiList[i])
+//                        )
+//                    }
+//                }
+//            }
+//            println(minDist)
+//        }
+//    }
+//    return@with Unit
+//}
