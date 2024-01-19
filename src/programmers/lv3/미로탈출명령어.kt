@@ -1,6 +1,6 @@
 package programmers.lv3
 
-import kotlin.math.abs
+
 
 /*
     미로 탈출 명령어
@@ -19,6 +19,8 @@ import kotlin.math.abs
     * k - 최단거리 = 홀수면 불가능.
     * k - 최단거리 <= 0 불가능.
  */
+
+import kotlin.math.abs
 
 //class Solution {
 //
