@@ -21,6 +21,7 @@ package bac.etc
     1. 기본이 되는 값을 채우기
     table[i][j] = table[i - 1][j - 1] + 1
     2.
+
 */
 
 

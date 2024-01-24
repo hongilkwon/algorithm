@@ -9,7 +9,7 @@ package bac.etc
     0 <= 빙산의 높이 <= 10
  */
 
-//
+
 //var n = 0
 //var m = 0
 //

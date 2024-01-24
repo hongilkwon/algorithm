@@ -1,3 +1,4 @@
+import java.util.PriorityQueue
 import kotlin.math.pow
 
 lateinit var arr: IntArray
@@ -6,9 +7,16 @@ lateinit var arr: IntArray
     play_ground
  */
 
+
 fun main() {
 
-    println(2.0.pow(10).toInt())
+    val pq = PriorityQueue<Int>()
+
+    pq.add(100)
+    pq.add(10)
+    pq.add(5)
+
+    println(pq.poll())
 
 }
 

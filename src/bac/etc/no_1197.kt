@@ -14,6 +14,7 @@ package bac.etc
 //
 //lateinit var arr: IntArray
 //lateinit var edgeArr: Array<Triple<Int, Int, Int>>
+//
 //fun getParent(n: Int): Int =
 //    if (n == arr[n]) {
 //        n
