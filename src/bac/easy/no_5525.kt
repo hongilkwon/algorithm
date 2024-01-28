@@ -1,7 +1,7 @@
 package bac.easy
 
 /*
-    IOIOI (좋은문제)
+    IOIOI (idea-좋은문제)
 
     분야: String
 

@@ -1,23 +1,37 @@
-import java.util.PriorityQueue
-import kotlin.math.pow
-
-lateinit var arr: IntArray
-
 /*
     play_ground
  */
 
 
+class CountingSet<T>(
+    val innerSet: MutableCollection<T> = HashSet<T>()
+) : MutableCollection<T> by innerSet {
+
+
+    var objectsAdded = 0
+    override fun add(element: T): Boolean {
+        objectsAdded += 1
+        return innerSet.add(element)
+    }
+
+    override fun addAll(elements: Collection<T>): Boolean {
+        objectsAdded += elements.size
+        return innerSet.addAll(elements)
+    }
+}
+
+
 fun main() {
 
-    val pq = PriorityQueue<Int>()
+    val cs = CountingSet<Int>()
 
-    pq.add(100)
-    pq.add(10)
-    pq.add(5)
+    cs.add(1)
+    cs.add(2)
+    cs.addAll(arrayOf(3,4,5))
 
-    println(pq.poll())
-
+    for (i in cs){
+        println(i)
+    }
 }
 
 

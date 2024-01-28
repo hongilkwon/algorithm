@@ -37,7 +37,13 @@
 //        o1.compareTo(o2)
 //    }
 //}
+
+//val cmp = object : Comparator<String>{
+//    override fun compare(o1: String?, o2: String?): Int {
 //
+//    }
+//}
+
 //fun main() {
 //    val arr = arrayOf("4", "23", "1", "9", "234", "728", "97")
 //
