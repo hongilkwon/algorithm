@@ -37,6 +37,7 @@ package bac.etc
 //
 //var isCycle = false
 //val orderList = mutableListOf<Int>()
+//
 //fun topologySort() {
 //
 //    val queue: Queue<Int> = LinkedList()
