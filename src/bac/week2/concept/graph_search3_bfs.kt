@@ -35,45 +35,47 @@ import java.util.Queue
 
 ////그래프 탐색 BFS
 //
-//val dist = IntArray(6) { 0 }
-//val visited = BooleanArray(6) { false }
-//
-//val queue: Queue<Int> = LinkedList()
-//
-//fun bfs(g: List<List<Int>>, u: Int) {
-//
-//    dist[u] = 1
-//    visited[u] = true
-//    queue.add(u)
-//
-//    while (queue.isNotEmpty()) {
-//        val v = queue.peek()
-//        queue.poll()
-//        println(v)
-//        for (u in g[v]) {
-//            if (!visited[u]) {
-//                visited[u] = true
-//                dist[u] = dist[v]+1
-//                queue.add(u)
-//            }
-//        }
-//    }
-//}
-//
-//fun main() {
-//
-//    val vNum = 6
-//    val adjList = MutableList(vNum) { mutableListOf<Int>() }
-//    adjList[1] = mutableListOf(2, 4)
-//    adjList[2] = mutableListOf(1, 3)
-//    adjList[3] = mutableListOf(2, 5)
-//    adjList[4] = mutableListOf(1, 5)
-//    adjList[5] = mutableListOf(3, 4)
-//
-//    bfs(adjList, 5)
-//    println(visited.joinToString())
-//    println(dist.joinToString())
-//}
+val dist = IntArray(6) { 0 }
+val visited = BooleanArray(6) { false }
+
+val queue: Queue<Int> = LinkedList()
+
+fun bfs(adjList: Array<MutableList<Int>>, s: Int) {
+
+    dist[s] = 1
+    visited[s] = true
+    queue.add(s)
+
+    while (queue.isNotEmpty()) {
+
+        val node = queue.poll()
+        println(node)
+
+        for (next in adjList[node]) {
+            if (!visited[next]) {
+                visited[next] = true
+                dist[next] = dist[node] + 1
+                queue.add(next)
+            }
+        }
+    }
+}
+
+fun main() {
+
+    val vNum = 6
+    val adjList = Array(vNum) { mutableListOf<Int>() }
+
+    adjList[1] = mutableListOf(2, 4)
+    adjList[2] = mutableListOf(1, 3)
+    adjList[3] = mutableListOf(2, 5)
+    adjList[4] = mutableListOf(1, 5)
+    adjList[5] = mutableListOf(3, 4)
+
+    bfs(adjList, 5)
+    println(visited.joinToString())
+    println(dist.joinToString())
+}
 
 ///*
 // map 탐색 BFS

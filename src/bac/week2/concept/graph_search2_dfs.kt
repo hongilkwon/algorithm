@@ -46,35 +46,35 @@ package bac.week2.concept
 // 그래프 탐색 DFS
 
 //private val vNum = 6
-//val adj = Array(vNum) { mutableListOf<Int>() }
+//val adjList = Array(vNum) { mutableListOf<Int>() }
 //val visited = Array(vNum) { 0 }
 //
-//fun dfs(g: Array<MutableList<Int>>, v: Int) {
+//fun dfs(v: Int) {
 //    println("v: $v")
 //    visited[v] = 1
-//    for (nv in adj[v]) {
+//    for (nv in adjList[v]) {
 //        if (visited[nv] == 1) continue
-//        dfs(g, nv)
+//        dfs(nv)
 //    }
 //}
 //
-//fun draw(){
-//    adj[1].add(2)
-//    adj[1].add(4)
+//fun draw() {
+//    adjList[1].add(2)
+//    adjList[1].add(4)
 //
-//    adj[2].add(1)
-//    adj[2].add(3)
+//    adjList[2].add(1)
+//    adjList[2].add(3)
 //
-//    adj[3].add(2)
-//    adj[3].add(5)
+//    adjList[3].add(2)
+//    adjList[3].add(5)
 //
-//    adj[4].add(1)
-//    adj[5].add(3)
+//    adjList[4].add(1)
+//    adjList[5].add(3)
 //}
 //
 //fun main() {
 //    draw()
-//    dfs(adj, 1)
+//    dfs(1)
 //    println(visited.joinToString())
 //}
 
@@ -87,10 +87,10 @@ package bac.week2.concept
      nxn 의 정사각의 맵이 주어졌다면,
 
      V = n*n개
-     E = (n-1)(n+2)개
+     E = (n-1)(2n)개
 
      시간 복잡도는
-     O(n^2+n^2+n-2)
+     O(n^2 + 2n^2 - 2n)
      --> O(n^2)
  */
 
@@ -103,14 +103,14 @@ package bac.week2.concept
 //)
 //
 //val dy = arrayOf(-1, 0, 1, 0)
-//val dx = arrayOf(-0, 1, 0, -1)
+//val dx = arrayOf(0, 1, 0, -1)
 //
 //val rows = 5
 //val cols = 5
 //val visited = Array(rows) { IntArray(cols) { 0 } }
 //
 //fun mDfs(map: Array<IntArray>, p: Pair<Int, Int>) {
-//    if (visited[p.first][p.second] == 1) return
+//
 //    visited[p.first][p.second] = 1
 //
 //    for (i in 0 until 4) {

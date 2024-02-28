@@ -14,10 +14,12 @@ package bac.easy
     N=15 완탐 2^15 충분히 가능하다.
 
  ... 그리디?? 현재 최선의 선택이 결론적으로 최선의 선택으로 이어지는가????
-    *dp
-
+    * dp
+    - table
+    - cache
  */
 
+//완전탐색
 //import kotlin.math.max
 //
 //var n = 0
@@ -54,35 +56,71 @@ package bac.easy
 //    return@with Unit
 //}
 
+// top-down(cache)
 
-var n = 0
+//import kotlin.math.max
+//
+//var n = 0
+//
+//lateinit var arr: Array<Pair<Int, Int>>
+//lateinit var cache: IntArray
+//
+//fun main() = with(System.`in`.bufferedReader()) {
+//
+//    n = readLine().toInt()
+//
+//    arr = Array(n) {
+//        val info = readLine().split(" ").map { it.toInt() }
+//        info[0] to info[1]
+//    }
+//
+//    cache = IntArray(n + 1) { 0 }
+//
+//    for (i in n - 1 downTo 0) {
+//        val t = arr[i].first
+//        val p = arr[i].second
+//
+//        if (i + t <= n) {
+//            cache[i] = max(cache[i + t] + p, cache[i + 1])
+//        }else{
+//            cache[i] = cache[i + 1]
+//        }
+//    }
+//
+////    println(cache.joinToString(" "))
+//    println(cache[0])
+//    return@with Unit
+//}
 
-lateinit var arr: Array<Pair<Int, Int>>
-lateinit var table: IntArray
 
-fun main() = with(System.`in`.bufferedReader()) {
-
-    n = readLine().toInt()
-
-    arr = Array(n) {
-        val info = readLine().split(" ").map { it.toInt() }
-        info[0] to info[1]
-    }
-
-    table = IntArray(n+1) { 0 }
-    for (i in 0 until n) {
-
-        val t = arr[i].first
-        val p = arr[i].second
-
-        for (j in i + t until arr.size) {
-            if (table[j] < table[i] + p) {
-                table[j] = table[i] + p
-            }
-        }
-    }
-
-    println(table.joinToString(" "))
-    println(table[n])
-    return@with Unit
-}
+//var n = 0
+//
+//lateinit var arr: Array<Pair<Int, Int>>
+//lateinit var table: IntArray
+//
+//fun main() = with(System.`in`.bufferedReader()) {
+//
+//    n = readLine().toInt()
+//
+//    arr = Array(n) {
+//        val info = readLine().split(" ").map { it.toInt() }
+//        info[0] to info[1]
+//    }
+//
+//    table = IntArray(n+1) { 0 }
+//    for (i in 0 until n) {
+//
+//        val t = arr[i].first
+//        val p = arr[i].second
+//
+//        for (j in i + t until arr.size) {
+//            if (table[j] < table[i] + p) {
+//                table[j] = table[i] + p
+//            }
+//        }
+//    }
+//
+//    println(table.joinToString(" "))
+//    println(table[n])
+//    return@with Unit
+//}

@@ -9,8 +9,9 @@ package math
 */
 
 //val doubleCombinationList = mutableListOf(
-//    'a', 'b', 'c', 'd', 'e',
-//    'f', 'g', 'h', 'i', 'j', 'k',
+//    'a', 'b', 'c',
+////    'd', 'e',
+////    'f', 'g', 'h', 'i', 'j', 'k',
 ////    'k', 'l', 'm', 'n', 'o',
 ////    'p', 'q', 'r', 's', 't',
 ////    'u', 'v', 'w', 'x', 'y',
@@ -18,26 +19,29 @@ package math
 //)
 //
 //var doubleCombinationTotalCnt = 0
-//fun doubleCombination(n: Int, r: Int, resultList: MutableList<Int> = mutableListOf(), start: Int = 0) {
+//
+//val resultList = mutableListOf<Int>()
+//fun doubleCombination(n: Int, r: Int, start: Int = 0) {
 //
 //    if (resultList.size == r) {
 //        /*
 //            logic
 //        * */
 //        doubleCombinationTotalCnt += 1
-////        println(resultList.joinToString(" "))
+//        println(resultList.joinToString(" "))
 //        return
 //    }
 //
 //    for (i in start until n) {
 //        resultList.add(i)
-//        doubleCombination(n, r, resultList, start = i)
+//        doubleCombination(n, r, start = i)
 //        resultList.remove(i)
 //    }
+//
 //}
 //
 //fun main() {
-//    doubleCombination(doubleCombinationList.size, 10)
+//    doubleCombination(doubleCombinationList.size, 4)
 //    println(doubleCombinationTotalCnt)
 //}
 
