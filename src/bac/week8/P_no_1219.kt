@@ -14,7 +14,6 @@ package bac.week8
     사이클을 인지 할 필요가 있음.
     * 최소 -> 최대 (초기화를 음의 무한대로 해서 돈의 액수를 늘린다.)
 
-
  */
 
 //import java.util.LinkedList

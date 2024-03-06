@@ -1,7 +1,7 @@
 package bac.etc
 
 /*
-    용액
+    용액(이분탐색, 투포인터)
 
     용액의 특성을 나타내는 하나의 정수
 
@@ -15,10 +15,7 @@ package bac.etc
 
     10만 * 10만
 
-
     ---> 커짐   줄어듬 <---
-
-    투 포인터
  */
 
 //import kotlin.math.abs
