@@ -16,6 +16,7 @@ package bac.etc
 
     - 타뷸레이션.
     i번째 집을 빨강, 초록, 파랑으로 칠했을 때의 비용의 최소값
+
     - 메모이제이션.
  */
 
@@ -39,7 +40,8 @@ package bac.etc
 //var n = 0
 //
 //lateinit var rgbs: Array<IntArray>
-//lateinit var case: Array<IntArray>
+//// 재사용을 위한 테이블!
+//lateinit var table: Array<IntArray>
 //
 //var min = 1_000 * 1_000
 //
@@ -52,15 +54,19 @@ package bac.etc
 //        rgbs[i] = readLine().split(" ").map { it.toInt() }.toIntArray()
 //    }
 //
-//    case = Array(n + 1) { IntArray(3) { 0 } }
+//    table = Array(n + 1) { IntArray(3) { 0 } }
 //
 //    for (i in 1..n) {
-//        case[i][0] = min(case[i - 1][1], case[i - 1][2]) + rgbs[i][0]
-//        case[i][1] = min(case[i - 1][0], case[i - 1][2]) + rgbs[i][1]
-//        case[i][2] = min(case[i - 1][1], case[i - 1][0]) + rgbs[i][2]
+//        table[i][0] = min(table[i - 1][1], table[i - 1][2]) + rgbs[i][0]
+//        table[i][1] = min(table[i - 1][0], table[i - 1][2]) + rgbs[i][1]
+//        table[i][2] = min(table[i - 1][1], table[i - 1][0]) + rgbs[i][2]
 //    }
 //
-//    println(min(case[n][2], min(case[n][0], case[n][1])))
+//    table.forEach {
+//        println(it.joinToString(" "))
+//    }
+//
+//    println(min(table[n][2], min(table[n][0], table[n][1])))
 //}
 
 //- 메모이제이션.

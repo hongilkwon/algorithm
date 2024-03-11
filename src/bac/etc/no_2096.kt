@@ -17,7 +17,6 @@ package bac.etc
 
 /*
     bottom - up 방식(tabulation)
-
  */
 
 import kotlin.math.max
