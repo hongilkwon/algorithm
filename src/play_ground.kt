@@ -4,9 +4,14 @@
 
 
 
+val intArr = intArrayOf(1,2,30,4,5)
 fun main() {
-    val temp = intArrayOf(0) + intArrayOf(2)
-    println(temp.joinToString(" "))
+
+    intArr.sumOf {
+        println(it)
+        it
+    }
+
 }
 
 

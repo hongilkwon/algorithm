@@ -12,8 +12,8 @@ package bac.etc
 
     학생의 수가 정수 n (2 ≤ n ≤ 100,000)
 
-    * 무방향 그래프에서 cycle 탐색 (union-find)
-    * 방향 그래프에서 cycle 탐색 (dfs)
+//    * 그래프에서 cycle 찾기만 (union-find)
+//    * 그래프에서 cycle 찾기 + cnt (dfs)
 
  */
 
