@@ -44,14 +44,13 @@ package bac.easy
 //        maxVisited = max(maxVisited, window)
 //    }
 //
-//   if (maxVisited ==0){
-//      println("SAD")
-//   }
-//   else{
-//      val cnt = windowSum.count { it == maxVisited }
-//      println(maxVisited)
-//      println(cnt)
-//   }
+//    if (maxVisited == 0) {
+//        println("SAD")
+//    } else {
+//        val cnt = windowSum.count { it == maxVisited }
+//        println(maxVisited)
+//        println(cnt)
+//    }
 //
 //    return@with Unit
 //}

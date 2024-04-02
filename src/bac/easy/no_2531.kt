@@ -1,7 +1,7 @@
 package bac.easy
 
 /*
-   회전초밥
+    회전초밥(슬라이스)
     초밥의 종류를 번호로 표현
     벨트 위에는 같은 종류의 초밥이 둘 이상 있을 수 있다.
 
@@ -70,7 +70,7 @@ package bac.easy
 //    return@with Unit
 //}
 
-// 시간초과......
+// 재귀를 통한 완전탐색, 시간초과......
 //import kotlin.math.max
 //
 //var n = 0
