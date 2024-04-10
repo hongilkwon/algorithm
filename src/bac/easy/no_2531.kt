@@ -23,6 +23,10 @@ package bac.easy
     Array의 copyOfRange를 사용한다.
 
     * arr.copyOfRange(i, n).toTypedArray() + arr.copyOfRange(0, (i + k) % n).toTypedArray()
+
+    1. arr - slice O(b-a)
+    2. 중복을 제거하는 set 사용
+    3. 원형자료구조 다루기 (%)
 */
 
 //import kotlin.math.max
@@ -35,6 +39,7 @@ package bac.easy
 //lateinit var arr: IntArray
 //
 //var maxSusi = 0
+//
 //fun main() = with(System.`in`.bufferedReader()) {
 //
 //    val info = readLine().split(" ").map { it.toInt() }
@@ -50,7 +55,7 @@ package bac.easy
 //
 ////    println(arr.joinToString(" "))
 //
-//    var set = mutableSetOf<Int>()
+//    val set = mutableSetOf<Int>()
 //    for (i in 0 until n) {
 //        var temp = emptyArray<Int>()
 //        if (i <= n - k) {

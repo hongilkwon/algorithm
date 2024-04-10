@@ -36,7 +36,7 @@ package bac.etc
 //lateinit var inDegree: IntArray
 //
 //var isCycle = false
-//val orderList = mutableListOf<Int>()
+//val order = mutableListOf<Int>()
 //
 //fun topologySort() {
 //
@@ -47,16 +47,19 @@ package bac.etc
 //        if (inDegree[i] == 0) queue.add(i)
 //    }
 //
+//    // 모든 노드를 방문한다.
 //    for (i in 1 until inDegree.size) {
+//        // 모든 노드를 방문전에 큐가 비면,
 //        if (queue.isEmpty()) {
 //            isCycle = true
 //            return
 //        }
-//        // queue에서 꺼내어 연결된 모든 edge를 제거한다.
+//
+//        // queue에서 꺼내어, 결과 리스트에 넣고, 그 노드와 연결된 모든 edge를 제거한다.
 //        val node = queue.poll()
-//        orderList.add(node)
+//        order.add(node)
 //        for (next in adjList[node]) {
-//            // inDegree 1개 줄이는것은 곳 제거하는것.
+//            // inDegree 1개 줄이는것은 곧, 제거하는것.
 //            inDegree[next] -= 1
 //            // degree 0인 node가 있다면, 큐에 삽입
 //            if (inDegree[next] == 0) {
@@ -74,6 +77,7 @@ package bac.etc
 //
 //    adjList = Array(n + 1) { mutableListOf() }
 //    inDegree = IntArray(n + 1)
+//
 //    for (i in 0 until m) {
 //        val edge = readLine().split(" ").map { it.toInt() }
 //        // u -> v
@@ -85,10 +89,11 @@ package bac.etc
 //
 //    topologySort()
 //    val sb = StringBuilder()
-//    orderList.reversed().forEach {
+//    order.reversed().forEach {
 //        sb.append("$it ")
 //    }
 //
+//    println(isCycle)
 //    println(sb.toString())
 //    return@with Unit
 //}

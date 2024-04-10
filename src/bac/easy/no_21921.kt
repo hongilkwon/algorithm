@@ -38,7 +38,7 @@ package bac.easy
 //    for (i in 1 until n - x + 1) {
 //
 //        window -= arr[i - 1]
-//        window += arr[i + (x - 1)]
+////        window += arr[i + (x - 1)]
 //        windowSum[i] = window
 //
 //        maxVisited = max(maxVisited, window)
