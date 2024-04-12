@@ -8,7 +8,6 @@ package bac.etc
    2 ≤ d ≤ 3_000,
    2 ≤ k ≤ 3_000 (k ≤ N), 1 ≤ c ≤ d
 
-
    시간복잡도를 위해 hash를 사용.
 
    kotlin mutableMap(hashmap)
@@ -40,7 +39,6 @@ package bac.etc
 //        arr[i] = readLine().toInt()
 //    }
 //
-//    // 쿠폰은 무조건 1
 //    val window = mutableMapOf<Int, Int>()
 //    for (i in 0 until k) {
 //        if (window.containsKey(arr[i]))
@@ -48,11 +46,12 @@ package bac.etc
 //        else
 //            window[arr[i]] = 1
 //    }
-////    println(window)
 //
-//    var maxSushi = window.size
+//    var maxSushi = if (window.containsKey(c)) window.size else window.size + 1
+//
 //    for (i in 1 until n) {
 //
+//        println(window)
 //        val (pre, post) = if (i <= n - k) {
 //            arr[i - 1] to arr[i + k - 1]
 //
@@ -71,9 +70,7 @@ package bac.etc
 //            window[post] = 1
 //
 //        // 쿠폰으로 받는 추가 초밥
-//        if (window.containsKey(c))
-//            window[c] = window[c]!! + 1
-//        else
+//        if (!window.containsKey(c))
 //            window[c] = 1
 //        maxSushi = max(maxSushi, window.size)
 //    }

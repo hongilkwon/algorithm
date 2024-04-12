@@ -3,64 +3,85 @@ package bac.easy
 /*
     스택 수열
 
-     n (1 ≤ n ≤ 100,000)
-     1이상 n이하의 정수가 하나씩 순서대로 주어진다. 물론 같은 정수가 두 번 나오는 일은 없다.
-     push하는 순서는 "반드시 오름차순"을 지키도록 한다고 하자
+    1부터 n까지의 수를 스택에 넣었다가 뽑아 늘어놓음 으로써, 하나의 수열을 만들 수 있다.
 
-     원본 + "어떤 스택의 명령어" -> 왜곡된 스택과 비교
+    1이상 n이하의 정수가 하나씩 순서대로 주어진다. 물론 같은 정수가 두 번 나오는 일은 없다.
+    n (1 ≤ n ≤ 100_000)
 
-    4
-    3
-    6
-    8
-    7
-    5
-    2
-    1
 
-    8
-    7
-    6     4, 3, 6, 8 7 5 2 1
-    5
-    2
-    1
+     즉, 별도의 명령어가 없었다면,
+     | 8 |  <<<<<< 1, 2, 3, 4, 5, 6, 7, 8  push push push...
+     | 7 |
+     | 6 |
+     | 5 |
+     | 4 |
+     | 3 |
+     | 2 |
+     | 1 |
+     | - |  >>>>> [8, 7, 6, 5, 4, 3, 2, 1] pop pop pop....
+
+     "오름 차순" 숫자 입력 + "어떤 스택의 명령어" ->  변경된 스택
+     | ? |  <<<<<< 1, 2, 3, 4, 5, 6, 7, 8
+     | ? |
+     | ? |
+     | ? |
+     | ? |
+     | ? |
+     | ? |
+     | ? |
+     | - |  >>>>> [4, 3, 6, 8, 7, 5, 2, 1]
+
+     4이 가장 앞에 있다는 것 은 1,2,3,4 들어가서 4가 나왔다!  [1, 2, 3]    ++++-
+     3이 가장 앞에 있다는 것 은 1,2,3에서 3이 나왔다!       [1, 2]        ++++--
+     6이 가장 앞에 있다는 것 은 5,6이 들어갔다가 6이 나왔다!  [1, 2, 5]     ++++--++-
+     8이 가장 앞에 있다는 것 은 7,8이 들어갔다가 8이 나왔다!  [1, 2, 5, 7]  ++++--++-++-
+     7이 가장 앞에 있다는 것 은 7이 나왔다!                [1, 2, 5]    ++++--++-++-
+     5이 가장 앞에 있다는 것 은 5이 나왔다!               [1, 2]        ++++--++-++--
+     2이 가장 앞에 있다는 것 은 5이 나왔다!               [1]           ++++--++-++---
+     1이 가장 앞에 있다는 것 은 5이 나왔다!               []            ++++--++-++----
+
+     1. 스택의 원리를 이해
+        - 스택에 들어 갔다 나오면 순서가 거꾸로 됨
+        - 빨리 나오면 수열에서 앞에 있는 원소이다.
+        - 나중에 나올수록 수열에서 뒤에 있는 원소이다.
 
     문제를 조금더 이해하고, 규칙을 찾는 편이 좋지 않았나 싶다.
     스택문제는 짝맞추는 경우가 아니면 조금 까다롭다.
  */
 
 
-import java.util.*
-
-
-var n = 0
-lateinit var arr: IntArray
-
-fun main() = with(System.`in`.bufferedReader()) {
-    n = readLine().toInt()
-    arr = IntArray(n) {
-        readLine().toInt()
-    }
-
-    var orignNum = 1
-    val operators = mutableListOf<Char>()
-    val s = Stack<Int>()
-
-    for (i in 0 until arr.size) {
-
-        while (orignNum <= arr[i]) {
-            s.add(orignNum)
-            operators.add('+')
-            orignNum += 1
-        }
-
-        if (s.peek() == arr[i]){
-            s.pop()
-            operators.add('-')
-        }else{
-            println("NO")
-            return@with
-        }
-    }
-    operators.forEach { println(it) }
-}
+//import java.util.*
+//
+//
+//var n = 0
+//lateinit var arr: IntArray
+//
+//fun main() = with(System.`in`.bufferedReader()) {
+//    n = readLine().toInt()
+//    arr = IntArray(n) {
+//        readLine().toInt()
+//    }
+//
+//    var orignNum = 1
+//    val operators = mutableListOf<Char>()
+//    val s = Stack<Int>()
+//
+//    for (i in 0 until arr.size) {
+//
+//        while (orignNum <= arr[i]) {
+//            s.add(orignNum)
+//            operators.add('+')
+//            orignNum += 1
+//        }
+//
+//        if (s.peek() == arr[i]) {
+//            s.pop()
+//            operators.add('-')
+//        } else {
+//            println("NO")
+//            return@with
+//        }
+//    }
+//
+//    operators.forEach { println(it) }
+//}
