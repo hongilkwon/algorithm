@@ -1,9 +1,2 @@
-8 7
-10 a
-15 aa
-10 aaaaa
-15 aaf
-10 aaaaaaa
-17 aaa
-18 aaaa
-26 b
+5
+2 5 4 1 3
