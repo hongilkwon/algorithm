@@ -32,7 +32,6 @@ package bac.easy
     5 7 (x)
     6 1
     7 3 (x)
-
 */
 
 
@@ -66,6 +65,5 @@ package bac.easy
 //        }
 //        println(cnt+1)
 //    }
-//
 //    return@with Unit
 //}
