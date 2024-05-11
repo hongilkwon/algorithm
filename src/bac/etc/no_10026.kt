@@ -1,14 +1,15 @@
 package bac.etc
 
 /*
-    적록색약
+    적록색약(dfs)
 
     (1 ≤ N ≤ 100)
+
     연결 컴포넌트의 기초 응용문제.
 
  */
 
-
+//
 //var n = 0
 //
 //lateinit var map: Array<CharArray>
@@ -29,7 +30,7 @@ package bac.etc
 //        val nx = node.second + dx[i]
 //
 //        if (ny !in 0 until n || nx !in 0 until n) continue
-//        if (map[ny][nx] in colors) {
+//        if (map[ny][nx] in colors) {d
 //            dfs(colors, ny to nx)
 //        }
 //    }
@@ -47,9 +48,9 @@ package bac.etc
 //    visited = Array(n) { IntArray(n) { 0 } }
 //    var cnt1 = 0
 //    for (r in 0 until n) {
-//        for (l in 0 until n) {
-//            if (visited[r][l] == 0) {
-//                dfs(charArrayOf(map[r][l]), r to l)
+//        for (c in 0 until n) {
+//            if (visited[r][c] == 0) {
+//                dfs(charArrayOf(map[r][c]), r to c)
 //                cnt1 += 1
 //            }
 //        }
@@ -58,10 +59,10 @@ package bac.etc
 //    visited = Array(n) { IntArray(n) { 0 } }
 //    var cnt2 = 0
 //    for (r in 0 until n) {
-//        for (l in 0 until n) {
-//            if (visited[r][l] == 0) {
-//                val arr = if (map[r][l] in charArrayOf('R', 'G')) charArrayOf('R', 'G') else charArrayOf('B')
-//                dfs(arr, r to l)
+//        for (c in 0 until n) {
+//            if (visited[r][c] == 0) {
+//                val arr = if (map[r][c] in charArrayOf('R', 'G')) charArrayOf('R', 'G') else charArrayOf('B')
+//                dfs(arr, r to c)
 //                cnt2 += 1
 //            }
 //        }
