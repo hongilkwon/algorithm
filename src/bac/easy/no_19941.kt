@@ -22,7 +22,8 @@ package bac.easy
     20 2
     H H H H H P P X P P H P H P H P H H H P
 */
-//
+
+
 //var n = 0
 //var k = 0
 //
