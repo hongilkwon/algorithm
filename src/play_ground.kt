@@ -18,8 +18,12 @@ val cmp = Comparator<Person> { o1, o2 ->
 }
 
 fun main() {
-    println(Int.MIN_VALUE)
-    println(Double.MIN_VALUE < 0)
+    val temp = mutableListOf(10, 11, 12, 13, 14)
+
+    println( temp.mapIndexed { index, v ->
+        println("index : $index, v: $v")
+        v+index
+    })
 }
 
 
