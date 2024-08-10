@@ -31,7 +31,7 @@ package sorting.basic
 //                swap(j, j + 1)
 //            }
 //        }
-////        println(arr.joinToString(" "))
+//        println("${i+1}회차 ${arr.joinToString(" ")}")
 //    }
 //}
 //

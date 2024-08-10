@@ -12,7 +12,7 @@ import kotlin.math.min
     시간복잡도 O(N^2)
  */
 
-//val arr = intArrayOf(1, 10, 5, 3, 2, 4, 7, 9, 8, 6)
+//val arr = intArrayOf(10, 1, 5, 3, 2, 4, 7, 9, 8, 6)
 //
 //fun swap(a: Int, b: Int) {
 //    val temp = arr[a]
@@ -31,6 +31,7 @@ import kotlin.math.min
 //        }
 //        // 교환.
 //        swap(i, selectedIdx)
+//        println("${i+1}회차 ${arr.joinToString(" ")}")
 //    }
 //}
 //

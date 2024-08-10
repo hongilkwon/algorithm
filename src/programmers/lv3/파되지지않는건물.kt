@@ -14,9 +14,9 @@ package programmers.lv3
 
     1_000_000 * 250_000
 
-    imos를 알고있어야 풀수있다.
-    https://driip.me/65d9b58c-bf02-44bf-8fba-54d394ed21e0
 
+  imos를 알고있어야 풀수있다.
+    https://driip.me/65d9b58c-bf02-44bf-8fba-54d394ed21e0
  */
 
 
